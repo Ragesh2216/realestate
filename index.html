@@ -4,421 +4,509 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly | Premium Real Estate</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Stackly - Premium Real Estate Solution</title>
+    <meta name="description"
+        content="Stackly - Your trusted partner for finding your dream home. Buy, sell, and rent properties with ease.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <!-- Loading Animation -->
-    <div id="loader">
-        <div class="loader-content">
-            <h1>STACKLY</h1>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="logo-loader">
+                <div class="stack-layer stack-1"></div>
+                <div class="stack-layer stack-2"></div>
+                <div class="stack-layer stack-3"></div>
+            </div>
+            <h2 class="loading-text">Stackly</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header>
-        <nav>
-            <a href="#" class="logo">STACKLY<span>.</span></a>
-
-            <ul class="nav-links">
-                <li><a href="404.html">About</a></li>
-                <li><a href="404.html">Services</a></li>
-                <li><a href="404.html">Login</a></li>
-                <li><a href="404.html" class="btn-contact">Contact</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <div class="logo-stack">
+                            <span class="stack-block b1"></span>
+                            <span class="stack-block b2"></span>
+                            <span class="stack-block b3"></span>
+                        </div>
+                        <span class="brand-name">Stackly</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#listings">Listings</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#agents">Agents</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="cta-btn" onclick="goto404()">List Your Property</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Find Your Dream Home <br> with Stackly</h1>
-            <p>Experience the pinnacle of luxury living. We connect you with the most exclusive properties in the
-                market.</p>
-            <a href="404.html" class="btn-primary">Explore Listings</a>
-        </div>
-    </section>
-
-    <!-- Featured Properties -->
-    <section id="properties" class="section-padding">
-        <div class="section-title">
-            <span>Exclusive Listings</span>
-            <h2>Featured Properties</h2>
-        </div>
-
-        <div class="properties-grid">
-            <!-- Property 1 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Modern Villa">
-                </div>
-                <div class="card-details">
-                    <h3>Modern Sunset Villa</h3>
-                    <span class="price">$2,500,000</span>
-                    <p>Beverly Hills, CA</p>
-                    <div class="card-info">
-                        <span>5 Beds</span>
-                        <span>4 Baths</span>
-                        <span>4,200 sqft</span>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Find Your <span class="gradient-text">Dream Home</span> Today
+                    </h1>
+                    <p class="hero-description">
+                        Discover the perfect property with Stackly. Whether you are buying, selling, or renting, we make
+                        the process seamless and stress-free.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="goto404()">Browse Listings</button>
+                        <button class="btn-secondary" onclick="goto404()">Sell Your Home</button>
                     </div>
                 </div>
-            </div>
-
-            <!-- Property 2 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Luxury Condo">
-                </div>
-                <div class="card-details">
-                    <h3>Downtown Luxury Penthouse</h3>
-                    <span class="price">$1,850,000</span>
-                    <p>New York, NY</p>
-                    <div class="card-info">
-                        <span>3 Beds</span>
-                        <span>2 Baths</span>
-                        <span>2,100 sqft</span>
+                <div class="hero-image">
+                    <img src="images/hero_realestate.jpg" alt="Luxury Home" class="hero-main-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🏠</div>
+                        <div class="card-info">
+                            <h4>New Listings</h4>
+                            <p>Daily updates</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Property 3 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Cozy Cottage">
-                </div>
-                <div class="card-details">
-                    <h3>Seaside Contemporary</h3>
-                    <span class="price">$3,200,000</span>
-                    <p>Malibu, CA</p>
-                    <div class="card-info">
-                        <span>4 Beds</span>
-                        <span>3 Baths</span>
-                        <span>3,500 sqft</span>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🔑</div>
+                        <div class="card-info">
+                            <h4>Turnkey</h4>
+                            <p>Move-in ready</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Property 4 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Modern Mansion">
-                </div>
-                <div class="card-details">
-                    <h3>Highland Estate</h3>
-                    <span class="price">$4,750,000</span>
-                    <p>Austin, TX</p>
-                    <div class="card-info">
-                        <span>6 Beds</span>
-                        <span>5 Baths</span>
-                        <span>5,800 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 5 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Suburb Home">
-                </div>
-                <div class="card-details">
-                    <h3>Maple Wood Family Home</h3>
-                    <span class="price">$950,000</span>
-                    <p>Portland, OR</p>
-                    <div class="card-info">
-                        <span>4 Beds</span>
-                        <span>3 Baths</span>
-                        <span>2,800 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 6 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Beach House">
-                </div>
-                <div class="card-details">
-                    <h3>Oceanfront Retreat</h3>
-                    <span class="price">$5,100,000</span>
-                    <p>Miami, FL</p>
-                    <div class="card-info">
-                        <span>5 Beds</span>
-                        <span>6 Baths</span>
-                        <span>4,500 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 7 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Modern Apartment">
-                </div>
-                <div class="card-details">
-                    <h3>Cityscape Apartment</h3>
-                    <span class="price">$1,200,000</span>
-                    <p>Chicago, IL</p>
-                    <div class="card-info">
-                        <span>2 Beds</span>
-                        <span>2 Baths</span>
-                        <span>1,500 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 8 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Country Estate">
-                </div>
-                <div class="card-details">
-                    <h3>Rolling Hills Estate</h3>
-                    <span class="price">$3,800,000</span>
-                    <p>Nashville, TN</p>
-                    <div class="card-info">
-                        <span>5 Beds</span>
-                        <span>4 Baths</span>
-                        <span>6,000 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 9 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Cabin in Woods">
-                </div>
-                <div class="card-details">
-                    <h3>Mountain View Cabin</h3>
-                    <span class="price">$850,000</span>
-                    <p>Denver, CO</p>
-                    <div class="card-info">
-                        <span>3 Beds</span>
-                        <span>2 Baths</span>
-                        <span>2,200 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 10 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Pool House">
-                </div>
-                <div class="card-details">
-                    <h3>Palm Springs Oasis</h3>
-                    <span class="price">$2,100,000</span>
-                    <p>Palm Springs, CA</p>
-                    <div class="card-info">
-                        <span>4 Beds</span>
-                        <span>3 Baths</span>
-                        <span>3,000 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 11 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Victorian Home">
-                </div>
-                <div class="card-details">
-                    <h3>Historic Victorian</h3>
-                    <span class="price">$1,600,000</span>
-                    <p>San Francisco, CA</p>
-                    <div class="card-info">
-                        <span>5 Beds</span>
-                        <span>3 Baths</span>
-                        <span>2,800 sqft</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property 12 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                        alt="Luxury Modern">
-                </div>
-                <div class="card-details">
-                    <h3>Glass House</h3>
-                    <span class="price">$4,200,000</span>
-                    <p>Seattle, WA</p>
-                    <div class="card-info">
-                        <span>4 Beds</span>
-                        <span>4 Baths</span>
-                        <span>3,800 sqft</span>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">📈</div>
+                        <div class="card-info">
+                            <h4>Market Value</h4>
+                            <p>Best prices</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="404.html" class="btn-primary">View All Properties</a>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding" style="background-color: var(--color-primary-alt);">
-        <div class="section-title">
-            <span>Our Expertise</span>
-            <h2>Why Choose Stackly?</h2>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Real Estate Services</h2>
+                <p class="section-subtitle">Comprehensive solutions for all your property needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Buy a Home</h3>
+                    <p>Find your perfect home with our extensive listings and expert guidance.</p>
+                    <button class="service-btn" onclick="goto404()">Search Homes →</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏷️</div>
+                    <h3>Sell a Home</h3>
+                    <p>Get the best price for your property with our premium marketing strategies.</p>
+                    <button class="service-btn" onclick="goto404()">Get Valuation →</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔑</div>
+                    <h3>Rentals</h3>
+                    <p>Browse our wide selection of rental properties in your desired location.</p>
+                    <button class="service-btn" onclick="goto404()">View Rentals →</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Property Management</h3>
+                    <p>Let us handle your investment property with our professional management services.</p>
+                    <button class="service-btn" onclick="goto404()">Learn More →</button>
+                </div>
+            </div>
         </div>
-        <div class="services-grid"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1400px; margin: 0 auto;">
-            <div class="service-card"
-                style="background: var(--color-primary); padding: 2rem; border-radius: 8px; text-align: center; transition: 0.3s;">
-                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">Property Management</h3>
-                <p style="color: #666;">We take care of your investment with professional management services, ensuring
-                    peace of mind.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Stackly?</h2>
+                <p class="section-subtitle">The smartest way to navigate the real estate market</p>
             </div>
-            <div class="service-card"
-                style="background: var(--color-primary); padding: 2rem; border-radius: 8px; text-align: center; transition: 0.3s;">
-                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">Expert Valuation</h3>
-                <p style="color: #666;">Get accurate market valuations for your property with our data-driven approach.
-                </p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🕶️</div>
+                    <h3>Virtual Tours</h3>
+                    <p>Explore properties from the comfort of your home with immersive 3D tours</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✅</div>
+                    <h3>Verified Listings</h3>
+                    <p>Every property is verified to ensure updated and accurate information</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Expert Agents</h3>
+                    <p>Work with top-rated agents who know your local market inside out</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Reach</h3>
+                    <p>Access international properties and buyers through our global network</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always available to answer your questions and assist you</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Market Insights</h3>
+                    <p>Stay informed with the latest market trends and data-driven analysis</p>
+                </div>
             </div>
-            <div class="service-card"
-                style="background: var(--color-primary); padding: 2rem; border-radius: 8px; text-align: center; transition: 0.3s;">
-                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">Legal Assistance</h3>
-                <p style="color: #666;">Our legal team ensures smooth transactions and compliance with all regulations.
-                </p>
+        </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section class="digital-banking-section">
+        <div class="container">
+            <div class="digital-content">
+                <div class="digital-image">
+                    <img src="images/mobile_realestate.jpg" alt="Real Estate App" class="digital-banking-img">
+                </div>
+                <div class="digital-text">
+                    <h2>Find Homes on the Go</h2>
+                    <p>Download the Stackly app to search for homes, schedule viewings, and communicate with agents
+                        anytime, anywhere. Your dream home is just a tap away.</p>
+                    <ul class="feature-list">
+                        <li>✓ Instant new listing alerts</li>
+                        <li>✓ Save your favorite properties</li>
+                        <li>✓ Schedule tours with one click</li>
+                        <li>✓ Mortgage calculator included</li>
+                    </ul>
+                    <button class="btn-primary" onclick="goto404()">Download App</button>
+                </div>
             </div>
-            <div class="service-card"
-                style="background: var(--color-primary); padding: 2rem; border-radius: 8px; text-align: center; transition: 0.3s;">
-                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">Interior Design</h3>
-                <p style="color: #666;">Unlock the full potential of your property with our premium staging and design
-                    services.</p>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="security-section">
+        <div class="container">
+            <div class="security-content">
+                <div class="security-text">
+                    <h2>Trusted by Thousands</h2>
+                    <p>We pride ourselves on transparency, integrity, and results. Join the thousands of satisfied
+                        clients who have found their perfect property with Stackly.</p>
+                    <div class="security-features">
+                        <div class="sec-feature">
+                            <div class="sec-icon">🏆</div>
+                            <div>
+                                <h4>Certified Agents</h4>
+                                <p>Licensed & Experienced</p>
+                            </div>
+                        </div>
+                        <div class="sec-feature">
+                            <div class="sec-icon">🔒</div>
+                            <div>
+                                <h4>Secure Process</h4>
+                                <p>Safe Transactions</p>
+                            </div>
+                        </div>
+                        <div class="sec-feature">
+                            <div class="sec-icon">⭐</div>
+                            <div>
+                                <h4>Top Rated</h4>
+                                <p>5-Star Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-secondary" onclick="goto404()">Our Guarantee</button>
+                </div>
+                <div class="security-visual">
+                    <img src="images/trust_realestate.jpg" alt="Trusted Agency" class="security-image">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section-padding">
-        <div class="section-title">
-            <span>Testimonials</span>
-            <h2>What Our Clients Say</h2>
-        </div>
-        <div
-            style="display: flex; gap: 2rem; max-width: 1400px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
-            <div style="background: #fff; padding: 2rem; border: 1px solid #eee; max-width: 400px;">
-                <p style="font-style: italic; color: #555; margin-bottom: 1.5rem;">"Stackly made finding our dream home
-                    an absolute breeze. The team was professional, attentive, and incredibly knowledgeable."</p>
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <div style="width: 50px; height: 50px; background: #ccc; border-radius: 50%; overflow: hidden;"><img
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=60"
-                            style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div>
-                        <h4 style="color: var(--color-secondary);">Sarah Johnson</h4>
-                        <span style="color: var(--color-accent); font-size: 0.8rem;">Homeowner</span>
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Stories</h2>
+                <p class="section-subtitle">Hear from our happy homeowners</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Stackly made buying our first home a breeze. The agent was incredibly
+                        helpful and walked us through every step!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div>
+                            <h4>John Doe</h4>
+                            <p>First-time Buyer</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div style="background: #fff; padding: 2rem; border: 1px solid #eee; max-width: 400px;">
-                <p style="font-style: italic; color: #555; margin-bottom: 1.5rem;">"We sold our property in record time
-                    thanks to Stackly's marketing strategy. Highly recommended for anyone looking to sell."</p>
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <div style="width: 50px; height: 50px; background: #ccc; border-radius: 50%; overflow: hidden;"><img
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=60"
-                            style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div>
-                        <h4 style="color: var(--color-secondary);">Michael Chen</h4>
-                        <span style="color: var(--color-accent); font-size: 0.8rem;">Investor</span>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"We sold our house in just 3 days! The marketing reach was amazing and
+                        we got above asking price."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div>
+                            <h4>Sarah Miller</h4>
+                            <p>Home Seller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The rental search features are fantastic. I found the perfect apartment
+                        in the exact neighborhood I wanted."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div>
+                            <h4>Michael Johnson</h4>
+                            <p>Tenant</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section
-        style="background: var(--color-secondary); padding: 5rem 5%; text-align: center; color: var(--color-primary);">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Find Your Place?</h2>
-        <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.8;">Join thousands of satisfied clients who have
-            found their perfect home with Stackly.</p>
-        <a href="404.html" class="btn-primary" style="background: var(--color-accent); border: none;">Contact Us
-            Today</a>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Seller Packages</h2>
+                <p class="section-subtitle">Choose the plan that fits your selling goals</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Basic Listing</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/upfront</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ MLS Listing</li>
+                        <li>✓ Basic Photos</li>
+                        <li>✓ Online Dashboard</li>
+                        <li>✓ Standard Commission</li>
+                        <li>✗ Premium Marketing</li>
+                    </ul>
+                    <button class="plan-btn" onclick="goto404()">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="plan-name">Premium Marketing</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">499</span>
+                        <span class="period">/upfront</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Everything in Basic</li>
+                        <li>✓ Professional Photography</li>
+                        <li>✓ Virtual Tour</li>
+                        <li>✓ Social Media Ads</li>
+                        <li>✓ Featured Listing Status</li>
+                    </ul>
+                    <button class="plan-btn" onclick="goto404()">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="plan-name">Developer</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">Custom</span>
+                        <span class="period">/quote</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Multiple Units</li>
+                        <li>✓ Branding Package</li>
+                        <li>✓ Dedicated Sales Team</li>
+                        <li>✓ Advanced Analytics</li>
+                        <li>✓ Open House Events</li>
+                    </ul>
+                    <button class="plan-btn" onclick="goto404()">Contact Us</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding about-section">
-        <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60"
-                alt="Our Team">
-        </div>
-        <div class="about-text">
-            <span>Who We Are</span>
-            <h2>Redefining Real Estate</h2>
-            <p>At Stackly, we believe that finding a home is about more than just a transaction. It's about finding a
-                space that aligns with your lifestyle and aspirations.</p>
-            <p>With over 15 years of experience in the luxury market, our team provides unparalleled service and
-                expertise.</p>
-
-            <div class="stats">
-                <div class="stat-item">
-                    <h4>150+</h4>
-                    <p>Sold Properties</p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Stackly Real Estate</h2>
+                    <p>Founded in 2020, Stackly is reshaping the real estate industry with innovative technology and a
+                        client-first approach. We believe in making property transactions transparent, efficient, and
+                        rewarding.</p>
+                    <p>Our mission is to help everyone find their place in the world, whether it's a starter home, a
+                        dream estate, or a smart investment.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3 class="stat-number">10K+</h3>
+                            <p>Properties Sold</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">$5B+</h3>
+                            <p>Sales Volume</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">98%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">500+</h3>
+                            <p>Agents</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h4>98%</h4>
-                    <p>Client Satisfaction</p>
+                <div class="about-image">
+                    <div class="about-visual">
+                        <div class="stat-bubble bubble-1">📈 Growing</div>
+                        <div class="stat-bubble bubble-2">🏆 Top Agency</div>
+                        <div class="stat-bubble bubble-3">🌟 Trusted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Move?</h2>
+                <p>Start your journey with Stackly today. Whether you are buying or selling, we are here to guide you
+                    home.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary large" onclick="goto404()">Browse Homes</button>
+                    <button class="btn-secondary large" onclick="goto404()">Contact an Agent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your property needs</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Property Lane<br>Beverly Hills, CA 90210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>Mon-Sun 9AM-8PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>agents@stackly.com<br>info@stackly.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <input type="text" placeholder="Your Name" class="form-input">
+                    <input type="email" placeholder="Your Email" class="form-input">
+                    <input type="text" placeholder="Subject (Buying/Selling)" class="form-input">
+                    <textarea placeholder="Your Message" class="form-textarea" rows="4"></textarea>
+                    <button class="btn-primary" onclick="goto404()">Send Message</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>STACKLY.</h4>
-                <p>Your partner in finding the perfect home.</p>
-                <div class="social-links">
-                    <a href="404.html"><i class="fab fa-facebook-f"></i></a>
-                    <a href="404.html"><i class="fab fa-twitter"></i></a>
-                    <a href="404.html"><i class="fab fa-instagram"></i></a>
-                    <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-stack">
+                            <span class="stack-block b1"></span>
+                            <span class="stack-block b2"></span>
+                            <span class="stack-block b3"></span>
+                        </div>
+                        <span class="brand-name">Stackly</span>
+                    </div>
+                    <p>Your trusted partner for all things real estate. Buying, selling, and renting made simple.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="404.html">About Us</a></li>
+                        <li><a href="404.html">Listings</a></li>
+                        <li><a href="404.html">Agents</a></li>
+                        <li><a href="404.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="404.html">Buy a Home</a></li>
+                        <li><a href="404.html">Sell Your Home</a></li>
+                        <li><a href="404.html">Rentals</a></li>
+                        <li><a href="404.html">Property Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="404.html">Help Center</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms of Service</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#properties">Properties</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Real Estate. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="404.html" class="social-icon">📘</a>
+                    <a href="404.html" class="social-icon">🐦</a>
+                    <a href="404.html" class="social-icon">📷</a>
+                    <a href="404.html" class="social-icon">💼</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li>123 Real Estate Blvd</li>
-                    <li>contact@stackly.com</li>
-                    <li>+1 (555) 123-4567</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Stackly Real Estate. All rights reserved.</p>
         </div>
     </footer>
 
