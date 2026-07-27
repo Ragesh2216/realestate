@@ -3,517 +3,1305 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - Premium Real Estate Solution</title>
-    <meta name="description"
-        content="Stackly - Your trusted partner for finding your dream home. Buy, sell, and rent properties with ease.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Stackly Houses - Premium Real Estate HTML5 Template">
+    <meta name="author" content="Stackly Houses Team">
+    <title>Stackly Houses - HTML5 Template</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loader-container">
-            <div class="logo-loader">
-                <div class="stack-layer stack-1"></div>
-                <div class="stack-layer stack-2"></div>
-                <div class="stack-layer stack-3"></div>
-            </div>
-            <h2 class="loading-text">Stackly</h2>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
+<body class="homepage-23 the-search">
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner"></div>
         </div>
     </div>
 
-    <!-- Header -->
-    <header id="main-header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <div class="logo">
-                        <div class="logo-stack">
-                            <span class="stack-block b1"></span>
-                            <span class="stack-block b2"></span>
-                            <span class="stack-block b3"></span>
-                        </div>
-                        <span class="brand-name">Stackly</span>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- SECTION 1: HEADER NAVIGATION -->
+        <header id="header-container" class="header sticky">
+            <div class="container-header">
+                <!-- Left Side Content -->
+                <div class="left-side">
+                    <div class="logo" id="logo">
+                        <a href="index.html">
+                            <img src="images/stackly-logo%20golden.webp" alt="Stackly logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle;">
+                        </a>
                     </div>
+                    <button class="mmenu-trigger" type="button" aria-label="Toggle Navigation">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
                 </div>
-                <ul class="nav-menu">
-                   
-      <li><a href="404.html">Home</a></li>
-      <li><a href="404.html">Listings</a></li>
-      <li><a href="404.html">Services</a></li>
-      <li><a href="404.html">Agents</a></li>
-      <li><a href="404.html">Contact</a></li>
-    
-                </ul>
-                <button class="cta-btn" onclick="goto404()">List Your Property</button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+                <!-- Right Side Content -->
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Find Your <span class="gradient-text">Dream Home</span> Today
-                    </h1>
-                    <p class="hero-description">
-                        Discover the perfect property with Stackly. Whether you are buying, selling, or renting, we make
-                        the process seamless and stress-free.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn-primary" onclick="goto404()">Browse Listings</button>
-                        <button class="btn-secondary" onclick="goto404()">Sell Your Home</button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/hero_realestate.jpg" alt="Luxury Home" class="hero-main-image">
-                    <div class="floating-card card-1">
-                        <div class="card-icon">🏠</div>
-                        <div class="card-info">
-                            <h4>New Listings</h4>
-                            <p>Daily updates</p>
-                        </div>
-                    </div>
-                    <div class="floating-card card-2">
-                        <div class="card-icon">🔑</div>
-                        <div class="card-info">
-                            <h4>Turnkey</h4>
-                            <p>Move-in ready</p>
-                        </div>
-                    </div>
-                    <div class="floating-card card-3">
-                        <div class="card-icon">📈</div>
-                        <div class="card-info">
-                            <h4>Market Value</h4>
-                            <p>Best prices</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Real Estate Services</h2>
-                <p class="section-subtitle">Comprehensive solutions for all your property needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Buy a Home</h3>
-                    <p>Find your perfect home with our extensive listings and expert guidance.</p>
-                    <button class="service-btn" onclick="goto404()">Search Homes →</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏷️</div>
-                    <h3>Sell a Home</h3>
-                    <p>Get the best price for your property with our premium marketing strategies.</p>
-                    <button class="service-btn" onclick="goto404()">Get Valuation →</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔑</div>
-                    <h3>Rentals</h3>
-                    <p>Browse our wide selection of rental properties in your desired location.</p>
-                    <button class="service-btn" onclick="goto404()">View Rentals →</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Property Management</h3>
-                    <p>Let us handle your investment property with our professional management services.</p>
-                    <button class="service-btn" onclick="goto404()">Learn More →</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Stackly?</h2>
-                <p class="section-subtitle">The smartest way to navigate the real estate market</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🕶️</div>
-                    <h3>Virtual Tours</h3>
-                    <p>Explore properties from the comfort of your home with immersive 3D tours</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✅</div>
-                    <h3>Verified Listings</h3>
-                    <p>Every property is verified to ensure updated and accurate information</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Expert Agents</h3>
-                    <p>Work with top-rated agents who know your local market inside out</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Global Reach</h3>
-                    <p>Access international properties and buyers through our global network</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💬</div>
-                    <h3>24/7 Support</h3>
-                    <p>Our team is always available to answer your questions and assist you</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📊</div>
-                    <h3>Market Insights</h3>
-                    <p>Stay informed with the latest market trends and data-driven analysis</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile App Section -->
-    <section class="digital-banking-section">
-        <div class="container">
-            <div class="digital-content">
-                <div class="digital-image">
-                    <img src="images/mobile_realestate.jpg" alt="Real Estate App" class="digital-banking-img">
-                </div>
-                <div class="digital-text">
-                    <h2>Find Homes on the Go</h2>
-                    <p>Download the Stackly app to search for homes, schedule viewings, and communicate with agents
-                        anytime, anywhere. Your dream home is just a tap away.</p>
-                    <ul class="feature-list">
-                        <li>✓ Instant new listing alerts</li>
-                        <li>✓ Save your favorite properties</li>
-                        <li>✓ Schedule tours with one click</li>
-                        <li>✓ Mortgage calculator included</li>
+                <nav id="navigation" class="style-1 head-tr">
+                    <ul id="responsive">
+                        <li class="active"><a href="index.html">Home</a></li><li><a href="listing.html">Projects</a></li><li><a href="property.html">Property</a></li><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li class="mobile-only-login"><a href="login.html" class="btn-green" style="margin: 1rem 0; text-align: center; color: white !important; display: block; border-radius: var(--radius-sm);">Login</a></li>
                     </ul>
-                    <button class="btn-primary" onclick="goto404()">Download App</button>
+                </nav>
+                 
+                <div class="right-side">
+                    <div class="header-widget">
+                        <a href="login.html" class="btn-green">Login</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
+        <div class="clearfix"></div>
 
-    <!-- Trust Section -->
-    <section class="security-section">
-        <div class="container">
-            <div class="security-content">
-                <div class="security-text">
-                    <h2>Trusted by Thousands</h2>
-                    <p>We pride ourselves on transparency, integrity, and results. Join the thousands of satisfied
-                        clients who have found their perfect property with Stackly.</p>
-                    <div class="security-features">
-                        <div class="sec-feature">
-                            <div class="sec-icon">🏆</div>
-                            <div>
-                                <h4>Certified Agents</h4>
-                                <p>Licensed & Experienced</p>
+        <!-- STAR HEADER SEARCH -->
+        <section id="home" class="parallax-searchs section welcome-area overlay" style="position: relative; overflow: hidden; min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 6rem 0;">
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+                <source src="images/videoplayback.mp4" type="video/mp4">
+            </video>
+            <!-- Dark Overlay to ensure readability -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); z-index: 2;"></div>
+            
+            <div class="hero-main" style="position: relative; z-index: 3; text-align: center; width: 100%;">
+                <div class="container">
+                    <div class="banner-inner" style="margin-bottom: 0;">
+                        <h1 class="title" style="margin-bottom: 1rem; color: var(--text-white); font-size: 3rem; font-weight: 800;">Find Your Dream Home</h1>
+                        <h5 class="sub-title" style="margin-bottom: 0; color: rgba(255, 255, 255, 0.9); font-size: 1.25rem;">We Have Over Million Properties For You</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEARCH CONTAINER UNDER HERO VIDEO -->
+        <section class="search-under-hero" style="background-color: var(--dark-bg); padding: 4rem 0; position: relative; z-index: 10;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="banner-search-wrap" style="position: relative; top: 0; margin: 0 auto;">
+                    <ul class="nav nav-tabs rld-banner-tab">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#tabs_1">For Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tabs_2">For Rent</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Tab 1: Sale Form -->
+                        <div class="tab-pane show active" id="tabs_1">
+                            <div class="rld-main-search">
+                                <div class="row">
+                                    <div class="rld-single-input">
+                                        <input type="text" placeholder="Enter Keyword...">
+                                    </div>
+                                    <div class="rld-single-select">
+                                        <select class="select single-select">
+                                            <option value="1">Property Type</option>
+                                            <option value="2">Family House</option>
+                                            <option value="3">Apartment</option>
+                                            <option value="4">Condo</option>
+                                        </select>
+                                    </div>
+                                    <div class="rld-single-select">
+                                        <select class="select single-select">
+                                            <option value="1">Location</option>
+                                            <option value="2">Los Angeles</option>
+                                            <option value="3">Chicago</option>
+                                            <option value="4">Philadelphia</option>
+                                            <option value="5">San Francisco</option>
+                                            <option value="6">Miami</option>
+                                            <option value="7">Houston</option>
+                                        </select>
+                                    </div>
+                                    <div class="dropdown-filter"><span>Advanced Search</span> <i class="fa-solid fa-angle-down"></i></div>
+                                    <div class="search-btn-container">
+                                        <a class="btn btn-yellow" href="404.html" onclick="validateSearch(event, 'tabs_1')"><i class="fa-solid fa-magnifying-glass"></i> Search Now</a>
+                                    </div>
+
+                                    <!-- Collapsible Advanced Search -->
+                                    <div class="explore__form-checkbox-list">
+                                        <div class="row">
+                                            <div class="form-group categories">
+                                                <select class="form-control">
+                                                    <option value="1">Property Status</option>
+                                                    <option value="2">For Sale</option>
+                                                    <option value="3">For Rent</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group beds">
+                                                <select class="form-control">
+                                                    <option value="1">Bedrooms</option>
+                                                    <option value="2">1</option>
+                                                    <option value="3">2</option>
+                                                    <option value="4">3</option>
+                                                    <option value="5">4+</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group bath">
+                                                <select class="form-control">
+                                                    <option value="1">Bathrooms</option>
+                                                    <option value="2">1</option>
+                                                    <option value="3">2</option>
+                                                    <option value="4">3+</option>
+                                                </select>
+                                            </div>
+                                            <!-- Area and Price Range Sliders -->
+                                            <div class="main-search-field-2">
+                                                <div class="range-slider">
+                                                    <label>Area Size: <span id="area-val" class="val-display">650 sq ft</span></label>
+                                                    <input type="range" id="area-slider" min="100" max="5000" value="650">
+                                                </div>
+                                                <div class="range-slider">
+                                                    <label>Price Range: <span id="price-val" class="val-display">$300,000</span></label>
+                                                    <input type="range" id="price-slider" min="10000" max="2000000" value="30000">
+                                                </div>
+                                            </div>
+                                            <!-- Features Checkboxes -->
+                                            <div class="checkboxes">
+                                                <label><input type="checkbox" name="check"> Air Conditioning</label>
+                                                <label><input type="checkbox" name="check"> Swimming Pool</label>
+                                                <label><input type="checkbox" name="check"> Central Heating</label>
+                                                <label><input type="checkbox" name="check"> Laundry Room</label>
+                                                <label><input type="checkbox" name="check"> Gym</label>
+                                                <label><input type="checkbox" name="check"> Alarm</label>
+                                            </div>
+                                            <div class="checkboxes">
+                                                <label><input type="checkbox" name="check"> WiFi</label>
+                                                <label><input type="checkbox" name="check"> TV Cable</label>
+                                                <label><input type="checkbox" name="check"> Dryer</label>
+                                                <label><input type="checkbox" name="check"> Microwave</label>
+                                                <label><input type="checkbox" name="check"> Washer</label>
+                                                <label><input type="checkbox" name="check"> Refrigerator</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="sec-feature">
-                            <div class="sec-icon">🔒</div>
-                            <div>
-                                <h4>Secure Process</h4>
-                                <p>Safe Transactions</p>
+
+                        <!-- Tab 2: Rent Form -->
+                        <div class="tab-pane" id="tabs_2">
+                            <div class="rld-main-search">
+                                <div class="row">
+                                    <div class="rld-single-input">
+                                        <input type="text" placeholder="Enter Keyword...">
+                                    </div>
+                                    <div class="rld-single-select">
+                                        <select class="select single-select">
+                                            <option value="1">Property Type</option>
+                                            <option value="2">Family House</option>
+                                            <option value="3">Apartment</option>
+                                            <option value="4">Condo</option>
+                                        </select>
+                                    </div>
+                                    <div class="rld-single-select">
+                                        <select class="select single-select">
+                                            <option value="1">Location</option>
+                                            <option value="2">Los Angeles</option>
+                                            <option value="3">Chicago</option>
+                                            <option value="4">Philadelphia</option>
+                                            <option value="5">San Francisco</option>
+                                            <option value="6">Miami</option>
+                                            <option value="7">Houston</option>
+                                        </select>
+                                    </div>
+                                    <div class="dropdown-filter"><span>Advanced Search</span> <i class="fa-solid fa-angle-down"></i></div>
+                                    <div class="search-btn-container">
+                                        <a class="btn btn-yellow" href="404.html" onclick="validateSearch(event, 'tabs_2')"><i class="fa-solid fa-magnifying-glass"></i> Search Now</a>
+                                    </div>
+
+                                    <!-- Collapsible Advanced Search -->
+                                    <div class="explore__form-checkbox-list">
+                                        <div class="row">
+                                            <div class="form-group categories">
+                                                <select class="form-control">
+                                                    <option value="1">Property Status</option>
+                                                    <option value="2">For Sale</option>
+                                                    <option value="3">For Rent</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group beds">
+                                                <select class="form-control">
+                                                    <option value="1">Bedrooms</option>
+                                                    <option value="2">1</option>
+                                                    <option value="3">2</option>
+                                                    <option value="4">3</option>
+                                                    <option value="5">4+</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group bath">
+                                                <select class="form-control">
+                                                    <option value="1">Bathrooms</option>
+                                                    <option value="2">1</option>
+                                                    <option value="3">2</option>
+                                                    <option value="4">3+</option>
+                                                </select>
+                                            </div>
+                                            <div class="main-search-field-2">
+                                                <div class="range-slider">
+                                                    <label>Area Size: <span id="area-val-rent" class="val-display">400 sq ft</span></label>
+                                                    <input type="range" id="area-slider-rent" min="100" max="3000" value="400">
+                                                </div>
+                                                <div class="range-slider">
+                                                    <label>Price Range: <span id="price-val-rent" class="val-display">$2,500</span></label>
+                                                    <input type="range" id="price-slider-rent" min="500" max="50000" value="2500">
+                                                </div>
+                                            </div>
+                                            <div class="checkboxes">
+                                                <label><input type="checkbox" name="check"> Air Conditioning</label>
+                                                <label><input type="checkbox" name="check"> Swimming Pool</label>
+                                                <label><input type="checkbox" name="check"> Central Heating</label>
+                                                <label><input type="checkbox" name="check"> Laundry Room</label>
+                                                <label><input type="checkbox" name="check"> Gym</label>
+                                                <label><input type="checkbox" name="check"> Alarm</label>
+                                            </div>
+                                            <div class="checkboxes">
+                                                <label><input type="checkbox" name="check"> WiFi</label>
+                                                <label><input type="checkbox" name="check"> TV Cable</label>
+                                                <label><input type="checkbox" name="check"> Dryer</label>
+                                                <label><input type="checkbox" name="check"> Microwave</label>
+                                                <label><input type="checkbox" name="check"> Washer</label>
+                                                <label><input type="checkbox" name="check"> Refrigerator</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="sec-feature">
-                            <div class="sec-icon">⭐</div>
-                            <div>
-                                <h4>Top Rated</h4>
-                                <p>5-Star Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HEADER SEARCH -->
+
+        <!-- START SECTION RECENTLY PROPERTIES -->
+        <section class="recently portfolio bg-white-2">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Recent</h3>
+                    <h2>Properties</h2>
+                </div>
+                <div class="carousel-container recent-carousel">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <!-- Card 1 -->
+                            <div class="carousel-slide project-single">
+                                <div class="project-inner">
+                                    <div class="homes-tag featured">Featured</div>
+                                    <div class="homes-tag sale">For Sale</div>
+                                    <a href="404.html" class="homes-img">
+                                        <img src="images/prop-1.webp" alt="Modern pool house decoration" />
+                                    </a>
+                                    <div class="button-effect">
+                                        <a href="404.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
+                                        <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
+                                        <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
+                                    </div>
+                                </div>
+                                <div class="homes-content">
+                                    <h3><a href="404.html">Real House Luxury Villa</a></h3>
+                                    <p class="homes-address">
+                                        <i class="fa-solid fa-location-dot"></i><span>Est St, 77 - Central Park South, NYC</span>
+                                    </p>
+                                    <ul class="homes-list">
+                                        <li><i class="fa-solid fa-bed"></i> 6 Bedrooms</li>
+                                        <li><i class="fa-solid fa-bath"></i> 3 Bathrooms</li>
+                                        <li><i class="fa-solid fa-maximize"></i> 720 sq ft</li>
+                                        <li><i class="fa-solid fa-car"></i> 2 Garages</li>
+                                    </ul>
+                                    <div class="price-properties">
+                                        <span class="price-val">$150,000</span>
+                                        <div class="compare">
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                            <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="carousel-slide project-single">
+                                <div class="project-inner">
+                                    <div class="homes-tag featured">Featured</div>
+                                    <div class="homes-tag rent">For Rent</div>
+                                    <a href="404.html" class="homes-img">
+                                        <img src="images/prop-2.webp" alt="Spacious property estate front view" />
+                                    </a>
+                                    <div class="button-effect">
+                                        <a href="404.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
+                                        <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
+                                        <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
+                                    </div>
+                                </div>
+                                <div class="homes-content">
+                                    <h3><a href="404.html">Beverly Hills Mansion</a></h3>
+                                    <p class="homes-address">
+                                        <i class="fa-solid fa-location-dot"></i><span>90210 Beverly Sunset Blvd, LA</span>
+                                    </p>
+                                    <ul class="homes-list">
+                                        <li><i class="fa-solid fa-bed"></i> 8 Bedrooms</li>
+                                        <li><i class="fa-solid fa-bath"></i> 5 Bathrooms</li>
+                                        <li><i class="fa-solid fa-maximize"></i> 1,450 sq ft</li>
+                                        <li><i class="fa-solid fa-car"></i> 4 Garages</li>
+                                    </ul>
+                                    <div class="price-properties">
+                                        <span class="price-val">$8,500/mo</span>
+                                        <div class="compare">
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                            <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="carousel-slide project-single">
+                                <div class="project-inner">
+                                    <div class="homes-tag featured">Featured</div>
+                                    <div class="homes-tag sale">For Sale</div>
+                                    <a href="404.html" class="homes-img">
+                                        <img src="images/prop-3.webp" alt="Modern architecture glasshouse" />
+                                    </a>
+                                    <div class="button-effect">
+                                        <a href="404.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
+                                        <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
+                                        <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
+                                    </div>
+                                </div>
+                                <div class="homes-content">
+                                    <h3><a href="404.html">Modern Glass Villa</a></h3>
+                                    <p class="homes-address">
+                                        <i class="fa-solid fa-location-dot"></i><span>Pine Ave, 12 - San Francisco, CA</span>
+                                    </p>
+                                    <ul class="homes-list">
+                                        <li><i class="fa-solid fa-bed"></i> 4 Bedrooms</li>
+                                        <li><i class="fa-solid fa-bath"></i> 3 Bathrooms</li>
+                                        <li><i class="fa-solid fa-maximize"></i> 680 sq ft</li>
+                                        <li><i class="fa-solid fa-car"></i> 1 Garage</li>
+                                    </ul>
+                                    <div class="price-properties">
+                                        <span class="price-val">$210,000</span>
+                                        <div class="compare">
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                            <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 (for sliding verification) -->
+                            <div class="carousel-slide project-single">
+                                <div class="project-inner">
+                                    <div class="homes-tag featured">Featured</div>
+                                    <div class="homes-tag sale">For Sale</div>
+                                    <a href="404.html" class="homes-img">
+                                        <img src="images/prop-4.webp" alt="Beautiful brick luxury house" />
+                                    </a>
+                                    <div class="button-effect">
+                                        <a href="404.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
+                                        <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
+                                        <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
+                                    </div>
+                                </div>
+                                <div class="homes-content">
+                                    <h3><a href="404.html">Luxury Brick Estate</a></h3>
+                                    <p class="homes-address">
+                                        <i class="fa-solid fa-location-dot"></i><span>Maple Dr, 44 - Boston, MA</span>
+                                    </p>
+                                    <ul class="homes-list">
+                                        <li><i class="fa-solid fa-bed"></i> 5 Bedrooms</li>
+                                        <li><i class="fa-solid fa-bath"></i> 4 Bathrooms</li>
+                                        <li><i class="fa-solid fa-maximize"></i> 890 sq ft</li>
+                                        <li><i class="fa-solid fa-car"></i> 3 Garages</li>
+                                    </ul>
+                                    <div class="price-properties">
+                                        <span class="price-val">$325,000</span>
+                                        <div class="compare">
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                            <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button class="btn-secondary" onclick="goto404()">Our Guarantee</button>
-                </div>
-                <div class="security-visual">
-                    <img src="images/trust_realestate.jpg" alt="Trusted Agency" class="security-image">
+                    <!-- Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-prev" aria-label="Previous Properties"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn carousel-next" aria-label="Next Properties"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- END SECTION RECENTLY PROPERTIES -->
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Client Stories</h2>
-                <p class="section-subtitle">Hear from our happy homeowners</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Stackly made buying our first home a breeze. The agent was incredibly
-                        helpful and walked us through every step!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
-                        <div>
-                            <h4>John Doe</h4>
-                            <p>First-time Buyer</p>
+        <!-- START SECTION SERVICES -->
+        <section class="services-home bg-white">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Property</h3>
+                    <h2>Services</h2>
+                </div>
+                <div class="row">
+                    <!-- Houses Card -->
+                    <div class="service">
+                        <div class="media">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="agent-section">
+                            <h4>Houses</h4>
+                            <p>Discover beautiful single family houses, suburban properties, and duplexes located in premium school districts and quiet residential suburbs.</p>
+                            <a href="404.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"We sold our house in just 3 days! The marketing reach was amazing and
-                        we got above asking price."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div>
-                            <h4>Sarah Miller</h4>
-                            <p>Home Seller</p>
+                    <!-- Apartments Card -->
+                    <div class="service">
+                        <div class="media">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <div class="agent-section">
+                            <h4>Apartments</h4>
+                            <p>Find luxury penthouses, modern city apartments, and cozy studios featuring state of the art utilities, premium security, and sky lounges.</p>
+                            <a href="404.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The rental search features are fantastic. I found the perfect apartment
-                        in the exact neighborhood I wanted."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
-                        <div>
-                            <h4>Michael Johnson</h4>
-                            <p>Tenant</p>
+                    <!-- Commercial Card -->
+                    <div class="service">
+                        <div class="media">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <div class="agent-section">
+                            <h4>Commercial</h4>
+                            <p>Establish your businesses in prime retail outlets, corporate towers, and distribution centers located in central business hubs across the US.</p>
+                            <a href="404.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- END SECTION SERVICES -->
 
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Seller Packages</h2>
-                <p class="section-subtitle">Choose the plan that fits your selling goals</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="plan-name">Basic Listing</h3>
-                    <div class="plan-price">
-                        <span class="currency">$</span>
-                        <span class="amount">0</span>
-                        <span class="period">/upfront</span>
+        <!-- START SECTION FEATURED PROPERTIES -->
+        <section class="featured portfolio bg-white-2">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Featured</h3>
+                    <h2>Properties</h2>
+                </div>
+                <div class="row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Item 1 -->
+                    <div class="project-single">
+                        <div class="project-inner">
+                            <div class="homes-tag featured">Featured</div>
+                            <div class="homes-tag sale">For Sale</div>
+                            <a href="404.html" class="homes-img">
+                                <img src="images/prop-5.webp" alt="Beautiful forest estate" />
+                            </a>
+                            <div class="button-effect">
+                                <a href="404.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <a href="404.html" class="btn"><i class="fa-solid fa-video"></i></a>
+                                <a href="404.html" class="btn"><i class="fa-regular fa-image"></i></a>
+                            </div>
+                        </div>
+                        <div class="homes-content">
+                            <h3><a href="404.html">Luxury Woodland Estate</a></h3>
+                            <p class="homes-address">
+                                <i class="fa-solid fa-location-dot"></i><span>Forest Lane 102 - Seattle, WA</span>
+                            </p>
+                            <ul class="homes-list">
+                                <li><i class="fa-solid fa-bed"></i> 5 Bedrooms</li>
+                                <li><i class="fa-solid fa-bath"></i> 4 Bathrooms</li>
+                                <li><i class="fa-solid fa-maximize"></i> 820 sq ft</li>
+                                <li><i class="fa-solid fa-car"></i> 3 Garages</li>
+                            </ul>
+                            <div class="price-properties">
+                                <span class="price-val">$230,000</span>
+                                <div class="compare">
+                                    <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                    <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="plan-features">
-                        <li>✓ MLS Listing</li>
-                        <li>✓ Basic Photos</li>
-                        <li>✓ Online Dashboard</li>
-                        <li>✓ Standard Commission</li>
-                        <li>✗ Premium Marketing</li>
+                    <!-- Item 2 -->
+                    <div class="project-single">
+                        <div class="project-inner">
+                            <div class="homes-tag featured">Featured</div>
+                            <div class="homes-tag rent">For Rent</div>
+                            <a href="404.html" class="homes-img">
+                                <img src="images/prop-6.webp" alt="Cozy city apartment" />
+                            </a>
+                            <div class="button-effect">
+                                <a href="404.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <a href="404.html" class="btn"><i class="fa-solid fa-video"></i></a>
+                                <a href="404.html" class="btn"><i class="fa-regular fa-image"></i></a>
+                            </div>
+                        </div>
+                        <div class="homes-content">
+                            <h3><a href="404.html">Downtown Cozy Studio</a></h3>
+                            <p class="homes-address">
+                                <i class="fa-solid fa-location-dot"></i><span>5th Ave 902 - Chicago, IL</span>
+                            </p>
+                            <ul class="homes-list">
+                                <li><i class="fa-solid fa-bed"></i> 2 Bedrooms</li>
+                                <li><i class="fa-solid fa-bath"></i> 1 Bathroom</li>
+                                <li><i class="fa-solid fa-maximize"></i> 320 sq ft</li>
+                                <li><i class="fa-solid fa-car"></i> 1 Garage</li>
+                            </ul>
+                            <div class="price-properties">
+                                <span class="price-val">$1,850/mo</span>
+                                <div class="compare">
+                                    <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                    <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="project-single">
+                        <div class="project-inner">
+                            <div class="homes-tag featured">Featured</div>
+                            <div class="homes-tag sale">For Sale</div>
+                            <a href="404.html" class="homes-img">
+                                <img src="images/prop-7.webp" alt="Cozy apartment sunlit living room" />
+                            </a>
+                            <div class="button-effect">
+                                <a href="404.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <a href="404.html" class="btn"><i class="fa-solid fa-video"></i></a>
+                                <a href="404.html" class="btn"><i class="fa-regular fa-image"></i></a>
+                            </div>
+                        </div>
+                        <div class="homes-content">
+                            <h3><a href="404.html">Sunlit Penthouse Suite</a></h3>
+                            <p class="homes-address">
+                                <i class="fa-solid fa-location-dot"></i><span>Bay Street 10 - San Francisco, CA</span>
+                            </p>
+                            <ul class="homes-list">
+                                <li><i class="fa-solid fa-bed"></i> 3 Bedrooms</li>
+                                <li><i class="fa-solid fa-bath"></i> 2 Bathrooms</li>
+                                <li><i class="fa-solid fa-maximize"></i> 640 sq ft</li>
+                                <li><i class="fa-solid fa-car"></i> 2 Garages</li>
+                            </ul>
+                            <div class="price-properties">
+                                <span class="price-val">$480,000</span>
+                                <div class="compare">
+                                    <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
+                                    <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-all">
+                    <a href="404.html" class="btn btn-primary">View All Properties</a>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION FEATURED PROPERTIES -->
+
+        <!-- START SECTION POPULAR PLACES -->
+        <section class="popular-places bg-white">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Most Popular</h3>
+                    <h2>Places</h2>
+                </div>
+                <div class="row">
+                    <!-- New York -->
+                    <div class="col-lg-4">
+                        <a href="404.html" class="img-box hover-effect">
+                            <img src="images/place-nyc.webp" alt="New York City skyline" />
+                            <div class="listing-badges">
+                                <span class="featured">Featured</span>
+                            </div>
+                            <div class="img-box-content">
+                                <h4>New York City</h4>
+                                <span>203 Properties</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Los Angeles -->
+                    <div class="col-lg-8">
+                        <a href="404.html" class="img-box hover-effect">
+                            <img src="images/place-la.webp" alt="Los Angeles sunset view" />
+                            <div class="img-box-content">
+                                <h4>Los Angeles</h4>
+                                <span>307 Properties</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- San Francisco -->
+                    <div class="col-lg-8" style="margin-top: 2rem;">
+                        <a href="404.html" class="img-box hover-effect">
+                            <img src="images/place-sf.webp" alt="San Francisco Golden Gate Bridge" />
+                            <div class="img-box-content">
+                                <h4>San Francisco</h4>
+                                <span>409 Properties</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Miami -->
+                    <div class="col-lg-4" style="margin-top: 2rem;">
+                        <a href="404.html" class="img-box hover-effect">
+                            <img src="images/place-miami.webp" alt="Miami beach landscape" />
+                            <div class="listing-badges">
+                                <span class="featured">Featured</span>
+                            </div>
+                            <div class="img-box-content">
+                                <h4>Miami</h4>
+                                <span>507 Properties</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION POPULAR PLACES -->
+
+        <!-- START SECTION AGENTS -->
+        <section class="team bg-white-2">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Meet Our</h3>
+                    <h2>Agents</h2>
+                </div>
+                <div class="team-all">
+                    <!-- Agent 1 -->
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="images/agent-1.webp" alt="Carls Jhons" />
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3>Carls Jhons</h3>
+                                <p>Real Estate Agent</p>
+                                <div class="team-socials">
+                                    <ul>
+                                        <li><a href="404.html" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="404.html" title="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="404.html" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <span><a href="404.html">View Profile</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agent 2 -->
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="images/agent-2.webp" alt="Arling Tracy" />
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3>Arling Tracy</h3>
+                                <p>Real Estate Agent</p>
+                                <div class="team-socials">
+                                    <ul>
+                                        <li><a href="404.html" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="404.html" title="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="404.html" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <span><a href="404.html">View Profile</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agent 3 -->
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="images/agent-3.webp" alt="Mark Web" />
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3>Mark Web</h3>
+                                <p>Real Estate Agent</p>
+                                <div class="team-socials">
+                                    <ul>
+                                        <li><a href="404.html" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="404.html" title="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="404.html" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <span><a href="404.html">View Profile</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agent 4 -->
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="images/agent-4.webp" alt="Katy Grace" />
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3>Katy Grace</h3>
+                                <p>Real Estate Agent</p>
+                                <div class="team-socials">
+                                    <ul>
+                                        <li><a href="404.html" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="404.html" title="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="404.html" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <span><a href="404.html">View Profile</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION AGENTS -->
+
+        <!-- START SECTION BLOG -->
+        <section class="blog-section bg-white">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Latest</h3>
+                    <h2>News</h2>
+                </div>
+                <div class="news-wrap">
+                    <div class="row">
+                        <!-- News 1 -->
+                        <div class="news-item">
+                            <a href="404.html" class="news-img-link">
+                                <div class="news-item-img">
+                                    <img src="images/blog-1.webp" alt="Real Estate meeting decoration" />
+                                </div>
+                            </a>
+                            <div class="news-item-text">
+                                <a href="404.html"><h3>Trends in Modern Housing Designs</h3></a>
+                                <span class="date">Jun 23, 2026 &nbsp;/&nbsp; By Admin</span>
+                                <div class="news-item-descr">
+                                    <p>Find out what modern home owners are looking for in architecture, smart amenities, and interior design.</p>
+                                </div>
+                                <div class="news-item-bottom">
+                                    <a href="404.html" class="news-link">Read more...</a>
+                                    <ul class="action-list">
+                                        <li><i class="fa-regular fa-heart"></i> <span>306</span></li>
+                                        <li><i class="fa-regular fa-comment"></i> <span>34</span></li>
+                                        <li><i class="fa-solid fa-share-nodes"></i> <span>122</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- News 2 -->
+                        <div class="news-item">
+                            <a href="404.html" class="news-img-link">
+                                <div class="news-item-img">
+                                    <img src="images/blog-2.webp" alt="Writing contract documents" />
+                                </div>
+                            </a>
+                            <div class="news-item-text">
+                                <a href="404.html"><h3>Real Estate Market Predictions</h3></a>
+                                <span class="date">Jul 01, 2026 &nbsp;/&nbsp; By Admin</span>
+                                <div class="news-item-descr">
+                                    <p>Analyze expert property price forecasts, interest rate patterns, and supply dynamics for next season.</p>
+                                </div>
+                                <div class="news-item-bottom">
+                                    <a href="404.html" class="news-link">Read more...</a>
+                                    <ul class="action-list">
+                                        <li><i class="fa-regular fa-heart"></i> <span>280</span></li>
+                                        <li><i class="fa-regular fa-comment"></i> <span>41</span></li>
+                                        <li><i class="fa-solid fa-share-nodes"></i> <span>94</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION BLOG -->
+
+        <!-- START SECTION TESTIMONIALS -->
+        <section class="testimonials bg-white-2">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Happy</h3>
+                    <h2>Customers</h2>
+                </div>
+                <div class="carousel-container testimonials-carousel">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <!-- Testimonial 1 -->
+                            <div class="carousel-slide test-1">
+                                <h3>Lisa Smith</h3>
+                                <img src="images/ts-1.webp" alt="Lisa Smith" />
+                                <h6>New York</h6>
+                                <ul class="starts">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p>"Finding my villa with Stackly Houses was incredibly fast. The support team walked me through structural audits and tax registration instantly."</p>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="carousel-slide test-1">
+                                <h3>Jhon Morris</h3>
+                                <img src="images/ts-2.webp" alt="Jhon Morris" />
+                                <h6>Los Angeles</h6>
+                                <ul class="starts">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-regular fa-star"></i></li>
+                                </ul>
+                                <p>"Excellent platform for agents and listings. The range sliders and advanced filters let customers screen properties dynamically."</p>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="carousel-slide test-1">
+                                <h3>Mary Deshaw</h3>
+                                <img src="images/ts-3.webp" alt="Mary Deshaw" />
+                                <h6>Chicago</h6>
+                                <ul class="starts">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p>"Their custom services card helped me land a high-yielding retail shop contract right in the center of Chicago's business core."</p>
+                            </div>
+                            <!-- Testimonial 4 -->
+                            <div class="carousel-slide test-1">
+                                <h3>Sarah Connor</h3>
+                                <img src="images/agent-1.webp" alt="Sarah Connor" />
+                                <h6>Miami</h6>
+                                <ul class="starts">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p>"Stackly Houses allowed me to list my beachfront condo and find a verified buyer in less than a week. The transaction dashboard was incredibly transparent!"</p>
+                            </div>
+                            <!-- Testimonial 5 -->
+                            <div class="carousel-slide test-1">
+                                <h3>David Miller</h3>
+                                <img src="images/agent-2.webp" alt="David Miller" />
+                                <h6>Philadelphia</h6>
+                                <ul class="starts">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p>"As a broker, the administrative approval process is so fast. My listings are live within minutes, attracting qualified leads immediately."</p>
+                            </div>
+                            <!-- Testimonial 6 -->
+                            <div class="carousel-slide test-1">
+                                <h3>Emma Watson</h3>
+                                <img src="images/agent-3.webp" alt="Emma Watson" />
+                                <h6>Houston</h6>
+                                <ul class="starts">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p>"The mobile interface made scheduling tours with local agents very straightforward. I found my dream duplex while commuting!"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-prev" aria-label="Previous Testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn carousel-next" aria-label="Next Testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <!-- Mobile only button -->
+                <div class="testimonials-mobile-btn" style="text-align: center; margin-top: 2.5rem;">
+                    <a href="404.html" class="btn btn-yellow" style="color: var(--dark-bg); font-weight: 700; padding: 0.75rem 2.5rem;">View All Reviews</a>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION TESTIMONIALS -->
+
+        <!-- START SECTION COUNTER UP -->
+        <section class="counterup">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="row">
+                    <!-- Metric 1 -->
+                    <div class="countr">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="count-me">
+                            <p class="counter" data-target="300">0</p>
+                            <h3>Sold Houses</h3>
+                        </div>
+                    </div>
+                    <!-- Metric 2 -->
+                    <div class="countr">
+                        <i class="fa-solid fa-list-check"></i>
+                        <div class="count-me">
+                            <p class="counter" data-target="400">0</p>
+                            <h3>Daily Listings</h3>
+                        </div>
+                    </div>
+                    <!-- Metric 3 -->
+                    <div class="countr">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="count-me">
+                            <p class="counter" data-target="250">0</p>
+                            <h3>Expert Agents</h3>
+                        </div>
+                    </div>
+                    <!-- Metric 4 -->
+                    <div class="countr">
+                        <i class="fa-solid fa-trophy"></i>
+                        <div class="count-me">
+                            <p class="counter" data-target="200">0</p>
+                            <h3>Won Awards</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- START NEIGHBORHOOD EXPLORER SECTION (NEW SECTION 1) -->
+        <section class="neighborhood bg-white">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Community</h3>
+                    <h2>Neighborhood Highlights</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background-color: var(--light-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; padding: 2.5rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <i class="fa-solid fa-walking" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Walkability Score</h4>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-light);">Most of our featured suburbs hold scores above 85, placing retail stores, transit stations, and recreational parks within short walking distances.</p>
+                        <span style="font-size: 2rem; font-weight: 800; color: var(--accent); display: block; margin-top: 1rem;">89/100</span>
+                    </div>
+                    <div style="background-color: var(--light-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; padding: 2.5rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <i class="fa-solid fa-graduation-cap" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem;">School District Rankings</h4>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-light);">Our residential homes are strategically located in close proximity to Tier-A public academies and highly ranked municipal educational districts.</p>
+                        <span style="font-size: 2rem; font-weight: 800; color: var(--accent); display: block; margin-top: 1rem;">9.2/10</span>
+                    </div>
+                    <div style="background-color: var(--light-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; padding: 2.5rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <i class="fa-solid fa-shield-halved" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Safety & Security Rating</h4>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-light);">Local communities feature automated 24/7 security monitoring, active community patrols, and low historical crime metrics.</p>
+                        <span style="font-size: 2rem; font-weight: 800; color: var(--accent); display: block; margin-top: 1rem;">A+ Rated</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END NEIGHBORHOOD EXPLORER SECTION -->
+
+        <!-- START CONCIERGE SERVICES (NEW SECTION 2) -->
+        <section class="concierge bg-white-2">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Exclusive</h3>
+                    <h2>Premium Concierge Services</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div style="background-color: var(--light-surface); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-sm); border-top: 4px solid var(--accent);">
+                        <i class="fa-solid fa-handshake-angle" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Bespoke Advisory</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-light);">Our specialists conduct structural inspections, title assessments, and market trend forecasts to guide buyers through purchase transactions safely.</p>
+                    </div>
+                    <div style="background-color: var(--light-surface); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-sm); border-top: 4px solid var(--accent);">
+                        <i class="fa-solid fa-scale-balanced" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Legal Representation</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-light);">We partner with real estate attorneys to coordinate escrow, documentation files, title clearances, and closing transactions.</p>
+                    </div>
+                    <div style="background-color: var(--light-surface); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-sm); border-top: 4px solid var(--accent);">
+                        <i class="fa-solid fa-screwdriver-wrench" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Renovation Planning</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-light);">Collaborate with our vetted general contractors and architects to customize, expand, and upgrade purchased properties.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END CONCIERGE SERVICES -->
+
+        <!-- START HOME FAQS (NEW SECTION 3) -->
+        <section class="home-faqs bg-white" style="padding-bottom: 6rem;">
+            <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <div class="section-title">
+                    <h3>Support</h3>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>What documents do I need to prepare when applying for a mortgage?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="line-height: 1.6; font-size: 0.9rem;">You will generally need proof of income (W-2 forms, tax returns, pay stubs), proof of assets (bank statements), credit verification data, and personal identification files.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>How does Stackly Houses verify property listing details?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="line-height: 1.6; font-size: 0.9rem;">Our local agents manually inspect all featured residences to confirm structural conditions, blueprint alignments, amenities lists, and seller documentation details before listing activation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HOME FAQS -->
+
+        <!-- START FOOTER -->
+        <footer class="first-footer">
+            <div class="top-footer">
+                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                    <div class="row">
+                        <!-- About -->
+                        <div class="col-lg-3">
+                            <div class="netabout">
+                                <a href="index.html" class="logo">
+                                    <img src="images/stackly-logo%20golden.webp" alt="Stackly logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle;">
+                                </a>
+                                <p>Simplifying the process of renting, buying, and advertising properties. Premium real estate layouts made accessible.</p>
+                            </div>
+                            <div class="contactus">
+                                <ul>
+                                    <li>
+                                        <div class="info">
+                                            <i class="fa-solid fa-map-marker-alt"></i>
+                                            <p>
+                                               STACKLY , phase1 salem - 636006</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>
++91 9872 45 8900</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <p>
+info@stackly.com</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Navigation -->
+                        <div class="col-lg-3">
+                            <div class="navigation">
+                                <h3>Navigation</h3>
+                                <div class="nav-footer">
+                                    <ul>
+                                        <li><a href="index.html">Home </a></li>
+                                         <li><a href="about.html">About Us</a></li>
+                                         <li><a href="contact.html">Contact Us</a></li>
+                                    
+                                        <li><a href="property.html">Property </a></li>
+                                        <li><a href="listing.html">Projects</a></li>
+                                    </ul>
+                                    <ul class="nav-right">
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Twitter Feeds -->
+                        <div class="col-lg-3">
+                            <div class="widget">
+                                <h3>Twitter Feeds</h3>
+                                <div class="twitter-widget contuct">
+                                    <div class="twitter-area">
+                                        <div class="single-item">
+                                            <div class="icon-holder"><i class="fa-brands fa-twitter"></i></div>
+                                            <div class="text">
+                                                <h5><a href="404.html">@StacklyHouses</a> All listings updated with full structural layout data sheet.</h5>
+                                                <h4>about 2 days ago</h4>
+                                            </div>
+                                        </div>
+                                        <div class="single-item">
+                                            <div class="icon-holder"><i class="fa-brands fa-twitter"></i></div>
+                                            <div class="text">
+                                                <h5><a href="404.html">@StacklyHouses</a> Exclusive pool mansions in Miami are now ready for touring.</h5>
+                                                <h4>about 5 days ago</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Newsletters -->
+                        <div class="col-lg-3">
+                            <div class="newsletters">
+                                <h3>Newsletters</h3>
+                                <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
+                            </div>
+                            <form class="bloq-email mailchimp form-inline" onsubmit="event.preventDefault(); window.location.href='404.html';">
+                                <div class="email">
+                                    <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email" required>
+                                    <input type="submit" value="Subscribe">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="second-footer">
+                <div class="container">
+                    <p>2026 Ã‚Â© Copyright - All Rights Reserved.</p>
+                    <ul class="netsocials">
+                        <li><a href="404.html"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="404.html"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="404.html"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="404.html"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
-                    <button class="plan-btn" onclick="goto404()">Get Started</button>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3 class="plan-name">Premium Marketing</h3>
-                    <div class="plan-price">
-                        <span class="currency">$</span>
-                        <span class="amount">499</span>
-                        <span class="period">/upfront</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✓ Everything in Basic</li>
-                        <li>✓ Professional Photography</li>
-                        <li>✓ Virtual Tour</li>
-                        <li>✓ Social Media Ads</li>
-                        <li>✓ Featured Listing Status</li>
-                    </ul>
-                    <button class="plan-btn" onclick="goto404()">Get Started</button>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="plan-name">Developer</h3>
-                    <div class="plan-price">
-                        <span class="currency">$</span>
-                        <span class="amount">Custom</span>
-                        <span class="period">/quote</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✓ Multiple Units</li>
-                        <li>✓ Branding Package</li>
-                        <li>✓ Dedicated Sales Team</li>
-                        <li>✓ Advanced Analytics</li>
-                        <li>✓ Open House Events</li>
-                    </ul>
-                    <button class="plan-btn" onclick="goto404()">Contact Us</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Stackly Real Estate</h2>
-                    <p>Founded in 2020, Stackly is reshaping the real estate industry with innovative technology and a
-                        client-first approach. We believe in making property transactions transparent, efficient, and
-                        rewarding.</p>
-                    <p>Our mission is to help everyone find their place in the world, whether it's a starter home, a
-                        dream estate, or a smart investment.</p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <h3 class="stat-number">10K+</h3>
-                            <p>Properties Sold</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number">$5B+</h3>
-                            <p>Sales Volume</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number">98%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number">500+</h3>
-                            <p>Agents</p>
-                        </div>
+        <a href="#wrapper" class="go-up" aria-label="Scroll to top"><i class="fa-solid fa-angles-up"></i></a>
+        <!-- END FOOTER -->
+
+        <!-- Register / Login Form Popup modal -->
+        <div class="login-and-register-form">
+            <div class="main-overlay"></div>
+            <div class="main-register-holder">
+                <div class="main-register">
+                    <div class="close-reg"><i class="fa-solid fa-xmark"></i></div>
+                    <h3>Welcome to <span>Find<strong>Houses</strong></span></h3>
+                    <div class="soc-log">
+                        <p>Login with Socials</p>
+                        <a href="404.html" class="facebook-log"><i class="fa-brands fa-facebook-f"></i> Log in with Facebook</a>
+                        <a href="404.html" class="twitter-log"><i class="fa-brands fa-twitter"></i> Log in with Twitter</a>
                     </div>
-                </div>
-                <div class="about-image">
-                    <div class="about-visual">
-                        <div class="stat-bubble bubble-1">📈 Growing</div>
-                        <div class="stat-bubble bubble-2">🏆 Top Agency</div>
-                        <div class="stat-bubble bubble-3">🌟 Trusted</div>
+                    <div class="log-separator"><span>Or</span></div>
+                    <div id="tabs-container">
+                        <ul class="tabs-menu">
+                            <li class="current"><a href="#tab-1">Login</a></li>
+                            <li><a href="#tab-2">Register</a></li>
+                        </ul>
+                        <!-- Login Content -->
+                        <div id="tab-1" class="tab-contents active">
+                            <div class="custom-form">
+                                <form method="post" onsubmit="event.preventDefault(); window.location.href='404.html';">
+                                    <label for="login-email">Username or Email Address *</label>
+                                    <input id="login-email" type="text" placeholder="Enter username or email" required>
+                                    <label for="login-pass">Password *</label>
+                                    <input id="login-pass" type="password" placeholder="Enter password" required>
+                                    <button type="submit" class="log-submit-btn">Log In</button>
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.85rem;">
+                                        <label style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
+                                            <input type="checkbox" style="margin-bottom: 0; width: 14px; height: 14px;"> Remember me
+                                        </label>
+                                        <a href="404.html" style="color: var(--accent);">Lost Password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Register Content -->
+                        <div id="tab-2" class="tab-contents">
+                            <div class="custom-form">
+                                <form method="post" onsubmit="event.preventDefault(); window.location.href='404.html';">
+                                    <label for="reg-fname">First Name *</label>
+                                    <input id="reg-fname" type="text" placeholder="First Name" required>
+                                    <label for="reg-lname">Last Name *</label>
+                                    <input id="reg-lname" type="text" placeholder="Last Name" required>
+                                    <label for="reg-email">Email Address *</label>
+                                    <input id="reg-email" type="email" placeholder="Email Address" required>
+                                    <label for="reg-pass">Password *</label>
+                                    <input id="reg-pass" type="password" placeholder="Password" required>
+                                    <button type="submit" class="log-submit-btn">Register</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Move?</h2>
-                <p>Start your journey with Stackly today. Whether you are buying or selling, we are here to guide you
-                    home.</p>
-                <div class="cta-buttons">
-                    <button class="btn-primary large" onclick="goto404()">Browse Homes</button>
-                    <button class="btn-secondary large" onclick="goto404()">Contact an Agent</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    <!-- Wrapper / End -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss your property needs</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Visit Us</h4>
-                            <p>123 Property Lane<br>Beverly Hills, CA 90210</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>Call Us</h4>
-                            <p>+1 (555) 123-4567<br>Mon-Sun 9AM-8PM</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <h4>Email Us</h4>
-                            <p>agents@stackly.com<br>info@stackly.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <input type="text" placeholder="Your Name" class="form-input">
-                    <input type="email" placeholder="Your Email" class="form-input">
-                    <input type="text" placeholder="Subject (Buying/Selling)" class="form-input">
-                    <textarea placeholder="Your Message" class="form-textarea" rows="4"></textarea>
-                    <button class="btn-primary" onclick="goto404()">Send Message</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="logo-stack">
-                            <span class="stack-block b1"></span>
-                            <span class="stack-block b2"></span>
-                            <span class="stack-block b3"></span>
-                        </div>
-                        <span class="brand-name">Stackly</span>
-                    </div>
-                    <p>Your trusted partner for all things real estate. Buying, selling, and renting made simple.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="404.html">About Us</a></li>
-                        <li><a href="404.html">Listings</a></li>
-                        <li><a href="404.html">Agents</a></li>
-                        <li><a href="404.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="404.html">Buy a Home</a></li>
-                        <li><a href="404.html">Sell Your Home</a></li>
-                        <li><a href="404.html">Rentals</a></li>
-                        <li><a href="404.html">Property Management</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="404.html">Help Center</a></li>
-                        <li><a href="404.html">Contact Us</a></li>
-                        <li><a href="404.html">Privacy Policy</a></li>
-                        <li><a href="404.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Stackly Real Estate. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="404.html" class="social-icon">📘</a>
-                    <a href="404.html" class="social-icon">🐦</a>
-                    <a href="404.html" class="social-icon">📷</a>
-                    <a href="404.html" class="social-icon">💼</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- CUSTOM MAIN JS -->
+    <script src="js/main.js"></script>
+    <script>
+        function validateSearch(event, tabId) {
+            event.preventDefault();
+            const tab = document.getElementById(tabId);
+            
+            // Select elements
+            const inputKeyword = tab.querySelector('input[type="text"]');
+            const selectType = tab.querySelectorAll('.rld-single-select select')[0];
+            const selectLocation = tab.querySelectorAll('.rld-single-select select')[1];
+            const selectStatus = tab.querySelector('.categories select');
+            const selectBeds = tab.querySelector('.beds select');
+            const selectBath = tab.querySelector('.bath select');
+            
+            let isValid = true;
+            
+            // Reset borders
+            [inputKeyword, selectType, selectLocation, selectStatus, selectBeds, selectBath].forEach(el => {
+                if (el) el.style.borderColor = '';
+            });
+            
+            // Validate Keyword
+            if (!inputKeyword || inputKeyword.value.trim() === '') {
+                if (inputKeyword) {
+                    inputKeyword.style.borderColor = '#ef4444';
+                    inputKeyword.placeholder = 'Please enter keyword...';
+                }
+                isValid = false;
+            }
+            
+            // Validate Type
+            if (!selectType || selectType.value === '1') {
+                if (selectType) selectType.style.borderColor = '#ef4444';
+                isValid = false;
+            }
+            
+            // Validate Location
+            if (!selectLocation || selectLocation.value === '1') {
+                if (selectLocation) selectLocation.style.borderColor = '#ef4444';
+                isValid = false;
+            }
+            
+            // Validate Status
+            if (!selectStatus || selectStatus.value === '1') {
+                if (selectStatus) selectStatus.style.borderColor = '#ef4444';
+                isValid = false;
+            }
+            
+            // Validate Bedrooms
+            if (!selectBeds || selectBeds.value === '1') {
+                if (selectBeds) selectBeds.style.borderColor = '#ef4444';
+                isValid = false;
+            }
+            
+            // Validate Bathrooms
+            if (!selectBath || selectBath.value === '1') {
+                if (selectBath) selectBath.style.borderColor = '#ef4444';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                window.location.href = '404.html';
+            } else {
+                
+            }
+        }
+    </script>
 </body>
-
 
 </html>

@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Client Dashboard - Premium Real Estate">
+    <title>Client Dashboard - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-client.html" class="dash-menu-item active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="client-saved.html" class="dash-menu-item"><i class="fa-solid fa-heart"></i> Saved Properties</a>
+                <a href="client-messages.html" class="dash-menu-item"><i class="fa-solid fa-envelope"></i> Messages</a>
+                <a href="client-settings.html" class="dash-menu-item"><i class="fa-solid fa-user-cog"></i> Profile Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+        
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Client Workspace</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Welcome back, Mary Jane! Last logged in today at 6:45 PM from Salem, India.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>Mary Jane</span>
+                    <div class="dash-user-avatar">MJ</div>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <section class="dash-grid-stats">
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>12</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Saved Properties</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Bookmarked for review</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>3</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Active Inquiries</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Ongoing broker chats</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>5</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Messages Received</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Unread alerts from agency</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>2</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Submitted Bids</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Financial offers sent</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Split Grid -->
+            <div class="dash-grid-content">
+                
+                <!-- Left Card: Bookmarked Properties -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <span><i class="fa-solid fa-star" style="color: var(--dash-green-primary);"></i> Recommended Properties</span>
+                            <a href="listing.html" class="dash-btn dash-btn-outline" style="font-size: 0.75rem; padding: 0.25rem 0.75rem;">Browse All</a>
+                        </div>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Curated matches based on your recent searches</span>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                        <!-- Property 1 -->
+                        <div style="background-color: var(--dash-white); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column;">
+                            <img src="images/prop-1.webp" alt="Property" style="width: 100%; height: 160px; object-fit: cover;">
+                            <div style="padding: 1rem; display: flex; flex-direction: column; flex: 1; gap: 0.5rem;">
+                                <span class="dash-badge dash-badge-green" style="align-self: flex-start;">For Sale</span>
+                                <h4 style="color: var(--dash-green-darkest); font-size: 0.95rem; margin: 0.25rem 0;">Luxury Villa House</h4>
+                                <p style="font-size: 0.8rem; color: var(--dash-green-dark);"><i class="fa-solid fa-location-dot"></i> Beverly Hills, CA</p>
+                                <h5 style="color: var(--dash-green-dark); font-size: 1.1rem; font-weight: 800; margin: 0.25rem 0;">$850,000</h5>
+                                <a href="property.html" class="dash-btn dash-btn-primary" style="text-align: center; display: block; margin-top: auto;">View Property</a>
+                            </div>
+                        </div>
+
+                        <!-- Property 2 -->
+                        <div style="background-color: var(--dash-white); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column;">
+                            <img src="images/prop-2.webp" alt="Property" style="width: 100%; height: 160px; object-fit: cover;">
+                            <div style="padding: 1rem; display: flex; flex-direction: column; flex: 1; gap: 0.5rem;">
+                                <span class="dash-badge dash-badge-green" style="align-self: flex-start;">For Rent</span>
+                                <h4 style="color: var(--dash-green-darkest); font-size: 0.95rem; margin: 0.25rem 0;">Family Apartment</h4>
+                                <p style="font-size: 0.8rem; color: var(--dash-green-dark);"><i class="fa-solid fa-location-dot"></i> Chicago, IL</p>
+                                <h5 style="color: var(--dash-green-dark); font-size: 1.1rem; font-weight: 800; margin: 0.25rem 0;">$2,400 / mo</h5>
+                                <a href="property.html" class="dash-btn dash-btn-primary" style="text-align: center; display: block; margin-top: auto;">View Property</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Right Card: Recent Inquiries -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <span><i class="fa-solid fa-history"></i> Recent Inquiries</span>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Your communication history with agents</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--dash-green-light); display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 0.85rem;">Grand Mansion Tour</span>
+                                <span class="dash-badge dash-badge-green" style="font-size: 0.65rem;">Approved</span>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--dash-green-dark);">Schedule date: July 30, 2026</p>
+                        </div>
+                        <div style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--dash-green-light); display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 0.85rem;">Apartment Lease Details</span>
+                                <span class="dash-badge dash-badge-light" style="font-size: 0.65rem;">Pending</span>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--dash-green-dark);">Broker response awaited</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 0.85rem;">Villa Pricing Offer</span>
+                                <span class="dash-badge dash-badge-green" style="font-size: 0.65rem;">Declined</span>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--dash-green-dark);">Price bid of $800k was not accepted</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+        
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

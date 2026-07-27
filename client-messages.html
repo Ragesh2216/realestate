@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Messages - Client Portal">
+    <title>Messages - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-client.html" class="dash-menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="client-saved.html" class="dash-menu-item"><i class="fa-solid fa-heart"></i> Saved Properties</a>
+                <a href="client-messages.html" class="dash-menu-item active"><i class="fa-solid fa-envelope"></i> Messages</a>
+                <a href="client-settings.html" class="dash-menu-item"><i class="fa-solid fa-user-cog"></i> Profile Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Messages</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Communicate directly with registered brokers regarding property viewings.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>Mary Jane</span>
+                    <div class="dash-user-avatar">MJ</div>
+                </div>
+            </header>
+
+            <!-- Messaging Split Window Grid -->
+            <div class="dash-grid-content" style="grid-template-columns: 1fr 2.5fr;">
+                
+                <!-- Contacts Card -->
+                <section class="dash-card" style="padding: 1rem;">
+                    <div class="dash-card-title" style="padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        <span style="font-size: 0.95rem;"><i class="fa-solid fa-address-book"></i> Active Contacts</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <!-- Contact 1 -->
+                        <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; border-radius: var(--radius-sm); background-color: var(--dash-green-light); border: 1px solid var(--dash-green-border); cursor: pointer;">
+                            <div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem; background-color: var(--dash-green-primary); color: white;">BD</div>
+                            <div style="flex: 1; min-width: 0;">
+                                <h4 style="font-size: 0.85rem; margin: 0; color: var(--dash-green-darkest); font-weight: 700;">Broker Dave</h4>
+                                <p style="font-size: 0.7rem; color: var(--dash-green-dark); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Tour is confirmed for Sunday...</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact 2 -->
+                        <div onclick="window.location.href='client-messages.html';" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; border-radius: var(--radius-sm); cursor: pointer; transition: var(--transition);">
+                            <div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem; background-color: var(--dash-white); border: 2px solid var(--dash-green-border); color: var(--dash-green-dark);">BS</div>
+                            <div style="flex: 1; min-width: 0;">
+                                <h4 style="font-size: 0.85rem; margin: 0; color: var(--dash-green-darkest); font-weight: 600;">Broker Sarah</h4>
+                                <p style="font-size: 0.7rem; color: var(--dash-green-dark); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Let me check the lease forms...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conversation Card -->
+                <section class="dash-card" style="display: flex; flex-direction: column; min-height: 400px; padding: 1.5rem 1rem 1rem 1rem;">
+                    <div class="dash-card-title" style="margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem; background-color: var(--dash-green-primary); color: white;">BD</div>
+                            <div>
+                                <span style="font-size: 0.95rem; font-weight: 700; display: block;">Broker Dave</span>
+                                <span style="font-size: 0.7rem; color: var(--dash-green-primary); font-weight: 600;"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Active Now</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Bubbles Area -->
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem; overflow-y: auto; padding: 1rem; background-color: var(--dash-green-light); border-radius: var(--radius-sm); border: 1px solid var(--dash-green-border); margin-bottom: 1rem;">
+                        <!-- Message 1 (Received) -->
+                        <div style="max-width: 70%; align-self: flex-start; background-color: var(--dash-white); border: 1px solid var(--dash-green-border); padding: 0.75rem; border-radius: 0 12px 12px 12px; font-size: 0.85rem;">
+                            Hello Mary! I've spoken with the owner of the Beverly Luxury Mansion.
+                            <span style="font-size: 0.65rem; color: var(--dash-green-dark); display: block; text-align: right; margin-top: 0.25rem;">10:24 AM</span>
+                        </div>
+
+                        <!-- Message 2 (Sent) -->
+                        <div style="max-width: 70%; align-self: flex-end; background-color: var(--dash-green-primary); color: var(--dash-white); padding: 0.75rem; border-radius: 12px 12px 0 12px; font-size: 0.85rem;">
+                            Great! Is the tour schedule for Sunday confirmed?
+                            <span style="font-size: 0.65rem; color: rgba(255, 255, 255, 0.8); display: block; text-align: right; margin-top: 0.25rem;">10:30 AM</span>
+                        </div>
+
+                        <!-- Message 3 (Received) -->
+                        <div style="max-width: 70%; align-self: flex-start; background-color: var(--dash-white); border: 1px solid var(--dash-green-border); padding: 0.75rem; border-radius: 0 12px 12px 12px; font-size: 0.85rem;">
+                            Yes, it is! Tour is confirmed for Sunday, 2:00 PM. I'll meet you at the property gate.
+                            <span style="font-size: 0.65rem; color: var(--dash-green-dark); display: block; text-align: right; margin-top: 0.25rem;">10:32 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Input Box -->
+                    <form onsubmit="event.preventDefault(); this.reset();" style="display: flex; gap: 0.5rem;">
+                        <input type="text" placeholder="Type a message..." required style="flex: 1; padding: 0.75rem 1rem; border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem; background-color: var(--dash-white); color: var(--dash-green-darkest);">
+                        <button type="submit" class="dash-btn dash-btn-primary" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

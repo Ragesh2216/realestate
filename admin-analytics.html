@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Analytics & Reports - Admin Portal">
+    <title>Analytics & Reports - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-admin.html" class="dash-menu-item"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="admin-properties.html" class="dash-menu-item"><i class="fa-solid fa-building"></i> Manage Properties</a>
+                <a href="admin-users.html" class="dash-menu-item"><i class="fa-solid fa-users"></i> Manage Users</a>
+                <a href="admin-analytics.html" class="dash-menu-item active"><i class="fa-solid fa-chart-pie"></i> Analytics & Reports</a>
+                <a href="admin-settings.html" class="dash-menu-item"><i class="fa-solid fa-cogs"></i> System Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Analytics & Reports</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Analyze traffic sources, monthly revenues, and lead generation activity.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>SysAdmin</span>
+                    <div class="dash-user-avatar">SA</div>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <section class="dash-grid-stats">
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>$48.2K</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Monthly Revenue</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">+12.4% from last month</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>124</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Active Subscriptions</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Verified brokers paid</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>1,489</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Client Leads</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Inquiries sent to owners</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>24.8K</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Total Pageviews</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Unique web sessions</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Split Grid -->
+            <div class="dash-grid-content">
+                
+                <!-- Left Card: SVG Bar Chart -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <span>Monthly Revenue Sources</span>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Revenue breakdown across channels</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                        <svg viewBox="0 0 200 100" class="dash-chart-svg" style="background-color: var(--dash-green-light); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); padding: 0.5rem;">
+                            <!-- Y-axis Grid Lines -->
+                            <line x1="20" y1="10" x2="190" y2="10" stroke="#dcfce7" stroke-width="0.5" />
+                            <line x1="20" y1="35" x2="190" y2="35" stroke="#dcfce7" stroke-width="0.5" />
+                            <line x1="20" y1="60" x2="190" y2="60" stroke="#dcfce7" stroke-width="0.5" />
+                            <line x1="20" y1="85" x2="190" y2="85" stroke="#dcfce7" stroke-width="0.5" />
+                            
+                            <!-- Bars (White with green borders/fills) -->
+                            <!-- Broker Subs -->
+                            <rect x="35" y="25" width="20" height="60" fill="var(--dash-green-primary)" rx="2" />
+                            <!-- Commissions -->
+                            <rect x="75" y="40" width="20" height="45" fill="var(--dash-green-dark)" rx="2" />
+                            <!-- Ads / Banners -->
+                            <rect x="115" y="55" width="20" height="30" fill="var(--dash-green-darkest)" rx="2" />
+                            <!-- Featured Listings -->
+                            <rect x="155" y="15" width="20" height="70" fill="#a7f3d0" stroke="var(--dash-green-primary)" stroke-width="0.5" rx="2" />
+                            
+                            <!-- Labels -->
+                            <text x="32" y="93" font-size="4" fill="var(--dash-green-darkest)" font-weight="700">Subscriptions</text>
+                            <text x="73" y="93" font-size="4" fill="var(--dash-green-darkest)" font-weight="700">Commissions</text>
+                            <text x="117" y="93" font-size="4" fill="var(--dash-green-darkest)" font-weight="700">Ad Spaces</text>
+                            <text x="155" y="93" font-size="4" fill="var(--dash-green-darkest)" font-weight="700">Featured Ads</text>
+                        </svg>
+                        <p style="font-size: 0.75rem; text-align: center; color: var(--dash-green-dark); font-weight: 600; margin: 0;">Featured listing advertisements are currently yielding the highest growth margin.</p>
+                    </div>
+                </section>
+
+                <!-- Right Card: Recent Payments -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <span>Recent Transactions</span>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Log of broker payment charges</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--dash-green-light); display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 0.85rem;">Broker Dave</span>
+                                <span style="font-weight: 700; font-size: 0.85rem; color: var(--dash-green-dark);">$299.00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--dash-green-dark);">
+                                <span>Monthly Subscription</span>
+                                <span class="dash-badge dash-badge-green" style="font-size: 0.6rem;">Success</span>
+                            </div>
+                        </div>
+                        <div style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--dash-green-light); display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 0.85rem;">Broker Sarah</span>
+                                <span style="font-weight: 700; font-size: 0.85rem; color: var(--dash-green-dark);">$450.00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--dash-green-dark);">
+                                <span>Featured Placement fee</span>
+                                <span class="dash-badge dash-badge-green" style="font-size: 0.6rem;">Success</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 0.85rem;">Broker Ken</span>
+                                <span style="font-weight: 700; font-size: 0.85rem; color: var(--dash-green-dark);">$299.00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--dash-green-dark);">
+                                <span>Monthly Subscription</span>
+                                <span class="dash-badge" style="background-color: #ef4444; color: white; font-size: 0.6rem;">Failed</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

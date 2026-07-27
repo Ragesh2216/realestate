@@ -1,308 +1,50 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Stackly</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6C3FE3 0%, #00D4D4 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            overflow: hidden;
-        }
-
-        .container-404 {
-            text-align: center;
-            padding: 40px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .logo-404 {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            justify-content: center;
-            margin-bottom: 40px;
-            font-size: 28px;
-            font-weight: 700;
-        }
-
-        .logo-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
-
-        .stack-block {
-            display: block;
-            height: 8px;
-            border-radius: 2px;
-            animation: stackPulse 1.5s ease-in-out infinite;
-        }
-
-        .stack-block.b1 {
-            width: 40px;
-            background: #FF6B6B;
-            animation-delay: 0s;
-        }
-
-        .stack-block.b2 {
-            width: 32px;
-            background: #00D4D4;
-            animation-delay: 0.2s;
-        }
-
-        .stack-block.b3 {
-            width: 24px;
-            background: #FFFFFF;
-            animation-delay: 0.4s;
-        }
-
-        @keyframes stackPulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scaleX(1);
-            }
-
-            50% {
-                opacity: 0.6;
-                transform: scaleX(0.8);
-            }
-        }
-
-        .error-code {
-            font-size: 150px;
-            font-weight: 900;
-            line-height: 1;
-            margin-bottom: 20px;
-            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .error-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .error-message {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-home {
-            display: inline-block;
-            padding: 16px 40px;
-            background: white;
-            color: #6C3FE3;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 18px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .btn-home:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .shapes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.1;
-        }
-
-        .shape1 {
-            width: 300px;
-            height: 300px;
-            background: white;
-            top: 10%;
-            left: 10%;
-            animation: rotate 20s linear infinite;
-        }
-
-        .shape2 {
-            width: 200px;
-            height: 200px;
-            background: #FF6B6B;
-            bottom: 10%;
-            right: 10%;
-            animation: rotate 15s linear infinite reverse;
-        }
-
-        .shape3 {
-            width: 150px;
-            height: 150px;
-            background: white;
-            top: 60%;
-            left: 80%;
-            animation: rotate 25s linear infinite;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: particle-float 6s ease-in-out infinite;
-        }
-
-        @keyframes particle-float {
-
-            0%,
-            100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: translateY(-100vh) translateX(50px);
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .error-code {
-                font-size: 100px;
-            }
-
-            .error-title {
-                font-size: 32px;
-            }
-
-            .error-message {
-                font-size: 16px;
-                padding: 0 20px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="404 Not Found - Stackly Houses Real Estate">
+    <title>404 Not Found - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="shapes">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
-    </div>
-
-    <div class="particles" id="particles"></div>
-
-    <div class="container-404">
-        <div class="logo-404">
-            <div class="logo-stack">
-                <span class="stack-block b1"></span>
-                <span class="stack-block b2"></span>
-                <span class="stack-block b3"></span>
-            </div>
-            <span>Stackly</span>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner"></div>
         </div>
-
-        <h1 class="error-code">404</h1>
-        <h2 class="error-title">Oops! Page Not Found</h2>
-        <p class="error-message">
-            The page you're looking for doesn't exist or has been moved.
-            Don't worry, let's get you back to banking!
-        </p>
-        <a href="index.html" class="btn-home">Return to Home</a>
     </div>
 
-    <script>
-        // Create floating particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 6 + 's';
-            particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
-            particlesContainer.appendChild(particle);
-        }
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-        // Add keyboard navigation
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === 'Escape') {
-                window.location.href = 'index.html';
-            }
-        });
-    </script>
+        <!-- MAIN 404 CONTENT -->
+        <main style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: var(--dark-bg); padding: 4rem 2rem; text-align: center;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="font-size: 8rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px;">404</div>
+                <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--text-white); margin-bottom: 1rem; line-height: 1.3;">Oops! This Property is Off the Market</h2>
+                <p style="color: var(--text-light); font-size: 1rem; line-height: 1.7; margin-bottom: 2.5rem;">The address or listing you are looking for has been moved, renamed, or is currently unavailable. Let's redirect you to a better location.</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" class="btn btn-yellow" style="padding: 0.9rem 2.5rem; font-weight: 700; font-size: 0.95rem; color: var(--dark-bg);">Back to Home Page</a>
+                    <button onclick="history.back();" class="btn btn-outline" style="padding: 0.9rem 2.5rem; font-weight: 700; font-size: 0.95rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-sm); color: var(--text-white); background: none; cursor: pointer; display: inline-block; transition: var(--transition);">Previous Page</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <!-- Wrapper / End -->
+
+    <!-- CUSTOM MAIN JS -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

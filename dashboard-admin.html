@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Admin Dashboard - Premium Real Estate">
+    <title>Admin Dashboard - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-admin.html" class="dash-menu-item active"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="admin-properties.html" class="dash-menu-item"><i class="fa-solid fa-building"></i> Manage Properties</a>
+                <a href="admin-users.html" class="dash-menu-item"><i class="fa-solid fa-users"></i> Manage Users</a>
+                <a href="admin-analytics.html" class="dash-menu-item"><i class="fa-solid fa-chart-pie"></i> Analytics & Reports</a>
+                <a href="admin-settings.html" class="dash-menu-item"><i class="fa-solid fa-cogs"></i> System Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+        
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Administrator Workspace</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Welcome back, System Admin! System Status: All services operational. Core load: 24%.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>SysAdmin</span>
+                    <div class="dash-user-avatar">SA</div>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <section class="dash-grid-stats">
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>248</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Total Properties</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Live listings in database</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-building-circle-check"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>1,842</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Active Users</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Registered clients & brokers</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3 style="color: #ea580c;">14</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold; color: #ea580c;">Pending Approvals</p>
+                        <span style="font-size: 0.72rem; color: #c2410c; font-weight: 500; display: block;">Awaiting manager validation</span>
+                    </div>
+                    <div class="dash-stat-icon" style="color: #ea580c;">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                </div>
+                <div class="dash-card-stat">
+                    <div class="dash-stat-info">
+                        <h3>$48.2K</h3>
+                        <p style="margin-bottom: 0.25rem; font-weight: bold;">Monthly Revenue</p>
+                        <span style="font-size: 0.72rem; color: var(--dash-green-dark); font-weight: 500; display: block;">Aggregate subscription fees</span>
+                    </div>
+                    <div class="dash-stat-icon">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Split Grid -->
+            <div class="dash-grid-content">
+                
+                <!-- Left Card: Pending Approvals Table -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <span><i class="fa-solid fa-list-check" style="color: var(--dash-green-primary);"></i> Listings Pending Approval</span>
+                            <a href="#" onclick="window.location.href='404.html'; return false;" class="dash-btn dash-btn-outline" style="font-size: 0.75rem; padding: 0.25rem 0.75rem;">View All</a>
+                        </div>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Review broker submissions before they go live on the public feed</span>
+                    </div>
+                    
+                    <div style="overflow-x: auto;">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Property Title</th>
+                                    <th>Submitted By</th>
+                                    <th>Location</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="pending-row-1">
+                                    <td style="font-weight: 600;">Beverly Luxury Mansion</td>
+                                    <td>Broker Dave</td>
+                                    <td>Los Angeles, CA</td>
+                                    <td style="font-weight: 700; color: var(--dash-green-dark);">$1,250,000</td>
+                                    <td>
+                                        <button onclick="approveListing('pending-row-1')" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-check"></i></button>
+                                        <button onclick="rejectListing('pending-row-1')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-times"></i></button>
+                                    </td>
+                                </tr>
+                                <tr id="pending-row-2">
+                                    <td style="font-weight: 600;">Downtown Apartment</td>
+                                    <td>Broker Sarah</td>
+                                    <td>Chicago, IL</td>
+                                    <td style="font-weight: 700; color: var(--dash-green-dark);">$340,000</td>
+                                    <td>
+                                        <button onclick="approveListing('pending-row-2')" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-check"></i></button>
+                                        <button onclick="rejectListing('pending-row-2')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-times"></i></button>
+                                    </td>
+                                </tr>
+                                <tr id="pending-row-3">
+                                    <td style="font-weight: 600;">Oakridge Family Villa</td>
+                                    <td>Owner John</td>
+                                    <td>Miami, FL</td>
+                                    <td style="font-weight: 700; color: var(--dash-green-dark);">$520,000</td>
+                                    <td>
+                                        <button onclick="approveListing('pending-row-3')" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-check"></i></button>
+                                        <button onclick="rejectListing('pending-row-3')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-times"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Right Card: Registration Trends Chart (SVG) -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <span><i class="fa-solid fa-chart-line"></i> User Sign-up Trends</span>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Weekly aggregate registration graph</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                        <!-- SVG Line Chart styled in green/white -->
+                        <svg viewBox="0 0 200 100" class="dash-chart-svg" style="background-color: var(--dash-green-light); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); padding: 0.5rem;">
+                            <!-- Grid lines -->
+                            <line x1="10" y1="20" x2="190" y2="20" stroke="#dcfce7" stroke-width="0.5" />
+                            <line x1="10" y1="40" x2="190" y2="40" stroke="#dcfce7" stroke-width="0.5" />
+                            <line x1="10" y1="60" x2="190" y2="60" stroke="#dcfce7" stroke-width="0.5" />
+                            <line x1="10" y1="80" x2="190" y2="80" stroke="#dcfce7" stroke-width="0.5" />
+                            
+                            <!-- Graph line -->
+                            <path d="M 20 80 Q 40 70 60 55 T 100 45 T 140 25 T 180 15" fill="none" stroke="var(--dash-green-primary)" stroke-width="2" />
+                            
+                            <!-- Data points -->
+                            <circle cx="20" cy="80" r="2.5" fill="var(--dash-green-dark)" />
+                            <circle cx="60" cy="55" r="2.5" fill="var(--dash-green-dark)" />
+                            <circle cx="100" cy="45" r="2.5" fill="var(--dash-green-dark)" />
+                            <circle cx="140" cy="25" r="2.5" fill="var(--dash-green-dark)" />
+                            <circle cx="180" cy="15" r="2.5" fill="var(--dash-green-dark)" />
+                            
+                            <!-- Labels -->
+                            <text x="18" y="92" font-size="5" fill="var(--dash-green-darkest)" font-weight="600">Mon</text>
+                            <text x="58" y="92" font-size="5" fill="var(--dash-green-darkest)" font-weight="600">Wed</text>
+                            <text x="98" y="92" font-size="5" fill="var(--dash-green-darkest)" font-weight="600">Fri</text>
+                            <text x="138" y="92" font-size="5" fill="var(--dash-green-darkest)" font-weight="600">Sat</text>
+                            <text x="178" y="92" font-size="5" fill="var(--dash-green-darkest)" font-weight="600">Sun</text>
+                        </svg>
+                        <p style="font-size: 0.75rem; text-align: center; color: var(--dash-green-dark); font-weight: 600; margin: 0;">Sign-up volume increased by 38.5% this week.</p>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        function approveListing(rowId) {
+            const row = document.getElementById(rowId);
+            if (row) {
+                
+                row.style.opacity = '0.4';
+                row.style.backgroundColor = '#dcfce7';
+                row.querySelector('td:last-child').innerHTML = '<span class="dash-badge dash-badge-green">Approved</span>';
+            }
+        }
+
+        function rejectListing(rowId) {
+            const row = document.getElementById(rowId);
+            if (row) {
+                if (confirm('Are you sure you want to reject/remove this listing?')) {
+                    row.style.opacity = '0.4';
+                    row.style.backgroundColor = '#fee2e2';
+                    row.querySelector('td:last-child').innerHTML = '<span class="dash-badge" style="background-color: #ef4444; color: white;">Rejected</span>';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

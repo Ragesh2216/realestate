@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Profile Settings - Client Portal">
+    <title>Profile Settings - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-client.html" class="dash-menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="client-saved.html" class="dash-menu-item"><i class="fa-solid fa-heart"></i> Saved Properties</a>
+                <a href="client-messages.html" class="dash-menu-item"><i class="fa-solid fa-envelope"></i> Messages</a>
+                <a href="client-settings.html" class="dash-menu-item active"><i class="fa-solid fa-user-cog"></i> Profile Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Profile Settings</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Configure your personal details, alerts, and account login parameters.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>Mary Jane</span>
+                    <div class="dash-user-avatar">MJ</div>
+                </div>
+            </header>
+
+            <!-- Main Content Split Grid -->
+            <div class="dash-grid-content">
+                
+                <!-- Left Card: Form Profile -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <span>Personal Profile details</span>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Edit your customer account credentials</span>
+                    </div>
+                    
+                    <form onsubmit="event.preventDefault(); window.location.href='404.html';" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label style="font-size: 0.85rem; font-weight: 600; color: var(--dash-green-darkest); margin-bottom: 0.5rem; display: block;">First Name</label>
+                                <input type="text" value="Mary" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem; background-color: var(--dash-white); color: var(--dash-green-darkest);">
+                            </div>
+                            <div>
+                                <label style="font-size: 0.85rem; font-weight: 600; color: var(--dash-green-darkest); margin-bottom: 0.5rem; display: block;">Last Name</label>
+                                <input type="text" value="Jane" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem; background-color: var(--dash-white); color: var(--dash-green-darkest);">
+                            </div>
+                        </div>
+                        <div>
+                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--dash-green-darkest); margin-bottom: 0.5rem; display: block;">Email Address</label>
+                            <input type="email" value="mary.jane@example.com" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem; background-color: var(--dash-white); color: var(--dash-green-darkest);">
+                        </div>
+                        <div>
+                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--dash-green-darkest); margin-bottom: 0.5rem; display: block;">New Password (leave empty to keep current)</label>
+                            <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem; background-color: var(--dash-white); color: var(--dash-green-darkest);">
+                        </div>
+                        <button type="submit" class="dash-btn dash-btn-primary" style="padding: 0.75rem 1.5rem; width: fit-content; font-size: 0.9rem;"><i class="fa-solid fa-save"></i> Save Profile Details</button>
+                    </form>
+                </section>
+
+                <!-- Right Card: Avatar upload & Notification Toggles -->
+                <section class="dash-card">
+                    <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                        <span>Avatar Settings & Alerts</span>
+                        <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Manage profile picture and email alerts</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+                        <!-- Avatar circle and buttons -->
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                            <div class="dash-user-avatar" style="width: 80px; height: 80px; font-size: 1.75rem; border-width: 3px;">MJ</div>
+                            <button class="dash-btn dash-btn-outline" onclick="window.location.href='404.html';" style="font-size: 0.8rem; padding: 0.35rem 1rem;"><i class="fa-solid fa-upload"></i> Upload New Pic</button>
+                        </div>
+                        
+                        <!-- Alert configurations -->
+                        <div style="width: 100%; border-top: 1px solid var(--dash-green-light); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <h4 style="font-size: 0.85rem; color: var(--dash-green-darkest); font-weight: 700; margin: 0 0 0.25rem 0;">Notification Subscriptions</h4>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="sub-alerts-1" checked style="width: 16px; height: 16px; accent-color: var(--dash-green-primary);">
+                                <label for="sub-alerts-1" style="font-size: 0.8rem; cursor: pointer; user-select: none;">Price drops on bookmarked listings</label>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="sub-alerts-2" checked style="width: 16px; height: 16px; accent-color: var(--dash-green-primary);">
+                                <label for="sub-alerts-2" style="font-size: 0.8rem; cursor: pointer; user-select: none;">Direct chat messages from brokers</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

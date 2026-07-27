@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Saved Properties - Client Portal">
+    <title>Saved Properties - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-house-chimney"></i> Stackly<span style="color: var(--dash-green-primary);">Houses</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-client.html" class="dash-menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="client-saved.html" class="dash-menu-item active"><i class="fa-solid fa-heart"></i> Saved Properties</a>
+                <a href="client-messages.html" class="dash-menu-item"><i class="fa-solid fa-envelope"></i> Messages</a>
+                <a href="client-settings.html" class="dash-menu-item"><i class="fa-solid fa-user-cog"></i> Profile Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Saved Properties</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Manage your bookmarked listings. Request updates or delete bookmarks.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>Mary Jane</span>
+                    <div class="dash-user-avatar">MJ</div>
+                </div>
+            </header>
+
+            <!-- Bookmarked Listings Grid -->
+            <section class="dash-card">
+                <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                    <span>My Bookmarks</span>
+                    <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Properties you are currently monitoring</span>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1rem;">
+                    <!-- Property 1 -->
+                    <div id="fav-card-1" style="background-color: var(--dash-white); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                        <img src="images/prop-1.webp" alt="Property" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; gap: 0.75rem;">
+                            <span class="dash-badge dash-badge-green" style="align-self: flex-start;">For Sale</span>
+                            <h4 style="color: var(--dash-green-darkest); font-size: 1rem; margin: 0;">Luxury Villa House</h4>
+                            <p style="font-size: 0.85rem; color: var(--dash-green-dark); margin: 0;"><i class="fa-solid fa-location-dot"></i> Beverly Hills, CA</p>
+                            <h5 style="color: var(--dash-green-dark); font-size: 1.25rem; font-weight: 800; margin: 0;">$850,000</h5>
+                            
+                            <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--dash-green-light);">
+                                <a href="property.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
+                                <button onclick="removeBookmark('fav-card-1')" class="dash-btn dash-btn-outline" style="color: #dc2626; border-color: #dc2626;" aria-label="Remove bookmark"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div id="fav-card-2" style="background-color: var(--dash-white); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                        <img src="images/prop-2.webp" alt="Property" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; gap: 0.75rem;">
+                            <span class="dash-badge dash-badge-green" style="align-self: flex-start;">For Rent</span>
+                            <h4 style="color: var(--dash-green-darkest); font-size: 1rem; margin: 0;">Family Apartment</h4>
+                            <p style="font-size: 0.85rem; color: var(--dash-green-dark); margin: 0;"><i class="fa-solid fa-location-dot"></i> Chicago, IL</p>
+                            <h5 style="color: var(--dash-green-dark); font-size: 1.25rem; font-weight: 800; margin: 0;">$2,400 / mo</h5>
+                            
+                            <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--dash-green-light);">
+                                <a href="property.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
+                                <button onclick="removeBookmark('fav-card-2')" class="dash-btn dash-btn-outline" style="color: #dc2626; border-color: #dc2626;" aria-label="Remove bookmark"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 3 -->
+                    <div id="fav-card-3" style="background-color: var(--dash-white); border: 1px solid var(--dash-green-border); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                        <img src="images/prop-3.webp" alt="Property" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; gap: 0.75rem;">
+                            <span class="dash-badge dash-badge-green" style="align-self: flex-start;">For Sale</span>
+                            <h4 style="color: var(--dash-green-darkest); font-size: 1rem; margin: 0;">Oakridge Family Villa</h4>
+                            <p style="font-size: 0.85rem; color: var(--dash-green-dark); margin: 0;"><i class="fa-solid fa-location-dot"></i> Miami, FL</p>
+                            <h5 style="color: var(--dash-green-dark); font-size: 1.25rem; font-weight: 800; margin: 0;">$520,000</h5>
+                            
+                            <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--dash-green-light);">
+                                <a href="property.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
+                                <button onclick="removeBookmark('fav-card-3')" class="dash-btn dash-btn-outline" style="color: #dc2626; border-color: #dc2626;" aria-label="Remove bookmark"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        function removeBookmark(cardId) {
+            const card = document.getElementById(cardId);
+            if (card) {
+                if (confirm('Are you sure you want to remove this property from bookmarks?')) {
+                    card.style.opacity = '0.3';
+                    setTimeout(() => {
+                        card.remove();
+                    }, 500);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Manage Users - Admin Portal">
+    <title>Manage Users - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-admin.html" class="dash-menu-item"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="admin-properties.html" class="dash-menu-item"><i class="fa-solid fa-building"></i> Manage Properties</a>
+                <a href="admin-users.html" class="dash-menu-item active"><i class="fa-solid fa-users"></i> Manage Users</a>
+                <a href="admin-analytics.html" class="dash-menu-item"><i class="fa-solid fa-chart-pie"></i> Analytics & Reports</a>
+                <a href="admin-settings.html" class="dash-menu-item"><i class="fa-solid fa-cogs"></i> System Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Manage Users</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Monitor client accounts, broker verification files, and privileges.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>SysAdmin</span>
+                    <div class="dash-user-avatar">SA</div>
+                </div>
+            </header>
+
+            <!-- Actions Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <button class="dash-btn dash-btn-primary" >All Users (1,842)</button>
+                    <button class="dash-btn dash-btn-outline" >Brokers (124)</button>
+                    <button class="dash-btn dash-btn-outline" >Clients (1,718)</button>
+                </div>
+                <button class="dash-btn dash-btn-primary" onclick="window.location.href='404.html';"><i class="fa-solid fa-user-plus"></i> Add New User</button>
+            </div>
+
+            <!-- Users Table -->
+            <section class="dash-card">
+                <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                    <span>User Accounts Directory</span>
+                    <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Overview of registered site profiles.</span>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Avatar</th>
+                                <th>Full Name</th>
+                                <th>Email Address</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="user-row-1">
+                                <td><div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">MJ</div></td>
+                                <td style="font-weight: 600;">Mary Jane</td>
+                                <td>mary.jane@example.com</td>
+                                <td><span class="dash-badge dash-badge-light">Client</span></td>
+                                <td><span class="dash-badge dash-badge-green" id="user-status-1">Active</span></td>
+                                <td>
+                                    <button onclick="toggleUserStatus('user-status-1')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-ban"></i> Toggle Ban</button>
+                                </td>
+                            </tr>
+                            <tr id="user-row-2">
+                                <td><div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">SD</div></td>
+                                <td style="font-weight: 600;">Broker Dave</td>
+                                <td>dave.broker@example.com</td>
+                                <td><span class="dash-badge" style="background-color: var(--dash-green-darkest); color: white;">Broker</span></td>
+                                <td><span class="dash-badge dash-badge-green" id="user-status-2">Active</span></td>
+                                <td>
+                                    <button onclick="toggleUserStatus('user-status-2')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-ban"></i> Toggle Ban</button>
+                                </td>
+                            </tr>
+                            <tr id="user-row-3">
+                                <td><div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">BS</div></td>
+                                <td style="font-weight: 600;">Broker Sarah</td>
+                                <td>sarah.b@example.com</td>
+                                <td><span class="dash-badge" style="background-color: var(--dash-green-darkest); color: white;">Broker</span></td>
+                                <td><span class="dash-badge" style="background-color: #ef4444; color: white;" id="user-status-3">Suspended</span></td>
+                                <td>
+                                    <button onclick="toggleUserStatus('user-status-3')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-ban"></i> Toggle Ban</button>
+                                </td>
+                            </tr>
+                            <tr id="user-row-4">
+                                <td><div class="dash-user-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">SA</div></td>
+                                <td style="font-weight: 600;">System Admin</td>
+                                <td>admin@StacklyHouses.com</td>
+                                <td><span class="dash-badge dash-badge-green">Administrator</span></td>
+                                <td><span class="dash-badge dash-badge-green" id="user-status-4">Active</span></td>
+                                <td>
+                                    <button onclick="" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; opacity: 0.5;"><i class="fa-solid fa-ban"></i> Disabled</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        function toggleUserStatus(spanId) {
+            const span = document.getElementById(spanId);
+            if (span) {
+                if (span.innerText === "Active") {
+                    span.innerText = "Suspended";
+                    span.style.backgroundColor = "#ef4444";
+                    span.style.color = "white";
+                    
+                } else {
+                    span.innerText = "Active";
+                    span.style.backgroundColor = "";
+                    span.style.color = "";
+                    span.className = "dash-badge dash-badge-green";
+                    
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

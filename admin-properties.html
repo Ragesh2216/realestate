@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Manage Properties - Admin Portal">
+    <title>Manage Properties - Stackly Houses</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- FONT AWESOME ICON KIT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
+            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dash-container">
+        
+        <!-- Mobile Header -->
+        <div class="dash-mobile-header">
+            <div class="dash-logo" style="font-size: 1.25rem;">
+                <i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span>
+            </div>
+            <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span><i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="dash-menu">
+                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard-admin.html" class="dash-menu-item"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="admin-properties.html" class="dash-menu-item active"><i class="fa-solid fa-building"></i> Manage Properties</a>
+                <a href="admin-users.html" class="dash-menu-item"><i class="fa-solid fa-users"></i> Manage Users</a>
+                <a href="admin-analytics.html" class="dash-menu-item"><i class="fa-solid fa-chart-pie"></i> Analytics & Reports</a>
+                <a href="admin-settings.html" class="dash-menu-item"><i class="fa-solid fa-cogs"></i> System Settings</a>
+                <a href="login.html" class="dash-menu-item" style="margin-top: auto; border-top: 1px solid var(--dash-green-border); padding-top: 1.5rem;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
+
+        <!-- Main Workspace -->
+        <main class="dash-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div>
+                    <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Manage Properties</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Add, edit, or remove listings from the active property database.</p>
+                </div>
+                <div class="dash-user-info">
+                    <span>SysAdmin</span>
+                    <div class="dash-user-avatar">SA</div>
+                </div>
+            </header>
+
+            <!-- Actions Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <button class="dash-btn dash-btn-primary" >Active (185)</button>
+                    <button class="dash-btn dash-btn-outline" >Pending (14)</button>
+                    <button class="dash-btn dash-btn-outline" >Archived (49)</button>
+                </div>
+                <button class="dash-btn dash-btn-primary" onclick="window.location.href='404.html';"><i class="fa-solid fa-plus"></i> Add New Listing</button>
+            </div>
+
+            <!-- Properties Table -->
+            <section class="dash-card">
+                <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                    <span>Property Listings Database</span>
+                    <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Database query: 248 records found.</span>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Property ID</th>
+                                <th>Listing Title</th>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="prop-row-1">
+                                <td>#PR-9081</td>
+                                <td style="font-weight: 600;">Beverly Luxury Mansion</td>
+                                <td>Villa</td>
+                                <td>Los Angeles, CA</td>
+                                <td style="font-weight: 700; color: var(--dash-green-dark);">$1,250,000</td>
+                                <td><span class="dash-badge dash-badge-light">Pending Approval</span></td>
+                                <td>
+                                    <button onclick="window.location.href='404.html';" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-edit"></i></button>
+                                    <button onclick="deleteRow('prop-row-1')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="prop-row-2">
+                                <td>#PR-9082</td>
+                                <td style="font-weight: 600;">Downtown Cozy Studio Apartment</td>
+                                <td>Apartment</td>
+                                <td>Chicago, IL</td>
+                                <td style="font-weight: 700; color: var(--dash-green-dark);">$340,000</td>
+                                <td><span class="dash-badge dash-badge-green">Active / Live</span></td>
+                                <td>
+                                    <button onclick="window.location.href='404.html';" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-edit"></i></button>
+                                    <button onclick="deleteRow('prop-row-2')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="prop-row-3">
+                                <td>#PR-9083</td>
+                                <td style="font-weight: 600;">Oakridge Family Villa</td>
+                                <td>House</td>
+                                <td>Miami, FL</td>
+                                <td style="font-weight: 700; color: var(--dash-green-dark);">$520,000</td>
+                                <td><span class="dash-badge dash-badge-green">Active / Live</span></td>
+                                <td>
+                                    <button onclick="window.location.href='404.html';" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-edit"></i></button>
+                                    <button onclick="deleteRow('prop-row-3')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="prop-row-4">
+                                <td>#PR-9084</td>
+                                <td style="font-weight: 600;">Seaside Horizon Suite</td>
+                                <td>Condo</td>
+                                <td>San Francisco, CA</td>
+                                <td style="font-weight: 700; color: var(--dash-green-dark);">$950,000</td>
+                                <td><span class="dash-badge" style="background-color: var(--dash-green-darkest); color: white;">Sold / Closed</span></td>
+                                <td>
+                                    <button onclick="window.location.href='404.html';" class="dash-btn dash-btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-edit"></i></button>
+                                    <button onclick="deleteRow('prop-row-4')" class="dash-btn dash-btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; color: #dc2626; border-color: #dc2626;"><i class="fa-solid fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        function toggleMobileSidebar(open) {
+            const sidebar = document.getElementById('dash-sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (open) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        function deleteRow(rowId) {
+            const row = document.getElementById(rowId);
+            if (row) {
+                if (confirm('Are you sure you want to delete this listing?')) {
+                    row.style.opacity = '0.3';
+                    setTimeout(() => {
+                        row.remove();
+                    }, 500);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
