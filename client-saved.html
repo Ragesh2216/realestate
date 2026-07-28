@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,8 +41,7 @@
                 <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
             </div>
             <nav class="dash-menu">
-                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
-                <a href="dashboard-client.html" class="dash-menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                                <a href="dashboard-client.html" class="dash-menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
                 <a href="client-saved.html" class="dash-menu-item active"><i class="fa-solid fa-heart"></i> Saved Properties</a>
                 <a href="client-messages.html" class="dash-menu-item"><i class="fa-solid fa-envelope"></i> Messages</a>
                 <a href="client-settings.html" class="dash-menu-item"><i class="fa-solid fa-user-cog"></i> Profile Settings</a>
@@ -89,7 +88,7 @@
                             <h5 style="color: var(--dash-green-dark); font-size: 1.25rem; font-weight: 800; margin: 0;">$850,000</h5>
                             
                             <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--dash-green-light);">
-                                <a href="property.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
+                                <a href="404.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
                                 <button onclick="removeBookmark('fav-card-1')" class="dash-btn dash-btn-outline" style="color: #dc2626; border-color: #dc2626;" aria-label="Remove bookmark"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
@@ -105,7 +104,7 @@
                             <h5 style="color: var(--dash-green-dark); font-size: 1.25rem; font-weight: 800; margin: 0;">$2,400 / mo</h5>
                             
                             <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--dash-green-light);">
-                                <a href="property.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
+                                <a href="404.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
                                 <button onclick="removeBookmark('fav-card-2')" class="dash-btn dash-btn-outline" style="color: #dc2626; border-color: #dc2626;" aria-label="Remove bookmark"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
@@ -121,7 +120,7 @@
                             <h5 style="color: var(--dash-green-dark); font-size: 1.25rem; font-weight: 800; margin: 0;">$520,000</h5>
                             
                             <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--dash-green-light);">
-                                <a href="property.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
+                                <a href="404.html" class="dash-btn dash-btn-primary" style="flex: 1; text-align: center;">Details</a>
                                 <button onclick="removeBookmark('fav-card-3')" class="dash-btn dash-btn-outline" style="color: #dc2626; border-color: #dc2626;" aria-label="Remove bookmark"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
@@ -175,6 +174,13 @@
                 card.style.opacity = '0.3';
                 setTimeout(() => {
                     card.remove();
+                    const remaining = document.querySelectorAll('[id^="fav-card-"]');
+                    if (remaining.length === 0) {
+                        const grid = document.querySelector('main section div[style*="display: grid"]');
+                        if (grid) {
+                            grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--dash-green-dark); font-size: 1.1rem; font-weight: 600;">all no more properties</div>';
+                        }
+                    }
                 }, 500);
             }
         }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,7 +24,7 @@
         <div class="dash-mobile-header">
             <div class="dash-logo" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.25rem;">
                 <img src="images/stackly-logo golden.webp" alt="Stackly logo" style="height: 28px; width: auto; object-fit: contain;">
-                <span style="font-size: 1.1rem; font-weight: 700; color: white;">Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                
             </div>
             <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -36,13 +36,12 @@
             <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <span style="display: flex; align-items: center; gap: 0.5rem;">
                     <img src="images/stackly-logo golden.webp" alt="Stackly logo" style="height: 32px; width: auto; object-fit: contain;">
-                    <span style="font-size: 1.1rem; font-weight: 700; color: white;">Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                    
                 </span>
                 <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
             </div>
             <nav class="dash-menu">
-                <a href="index.html" class="dash-menu-item"><i class="fa-solid fa-home"></i> Home</a>
-                <a href="dashboard-admin.html" class="dash-menu-item"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                                <a href="dashboard-admin.html" class="dash-menu-item"><i class="fa-solid fa-gauge"></i> Dashboard</a>
                 <a href="admin-properties.html" class="dash-menu-item active"><i class="fa-solid fa-building"></i> Manage Properties</a>
                 <a href="admin-users.html" class="dash-menu-item"><i class="fa-solid fa-users"></i> Manage Users</a>
                 <a href="admin-analytics.html" class="dash-menu-item"><i class="fa-solid fa-chart-pie"></i> Analytics & Reports</a>
@@ -55,7 +54,7 @@
         <div class="dash-sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileSidebar(false)"></div>
 
         <!-- Main Workspace -->
-        <main class="dash-main">
+        <main class="dash-main" style="gap: 1.25rem; padding: 1.5rem;">
             
             <!-- Dashboard Header -->
             <header class="dash-header">
@@ -75,9 +74,9 @@
             <!-- Actions Bar -->
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <div style="display: flex; gap: 0.5rem;">
-                    <button class="dash-btn dash-btn-primary" >Active (185)</button>
-                    <button class="dash-btn dash-btn-outline" >Pending (14)</button>
-                    <button class="dash-btn dash-btn-outline" >Archived (49)</button>
+                    <button class="dash-btn dash-btn-primary" id="active-count-btn">Active (185)</button>
+                    <button class="dash-btn dash-btn-outline" onclick="window.location.href='404.html';">Pending (14)</button>
+                    <button class="dash-btn dash-btn-outline" onclick="window.location.href='404.html';">Archived (49)</button>
                 </div>
                 <button class="dash-btn dash-btn-primary" onclick="window.location.href='404.html';"><i class="fa-solid fa-plus"></i> Add New Listing</button>
             </div>
@@ -86,7 +85,7 @@
             <section class="dash-card">
                 <div class="dash-card-title" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
                     <span>Property Listings Database</span>
-                    <span style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Database query: 248 records found.</span>
+                    <span id="db-query-count" style="font-size: 0.75rem; font-weight: 500; color: var(--dash-green-dark); display: block;">Database query: 248 records found.</span>
                 </div>
                 
                 <div style="overflow-x: auto;">
@@ -102,7 +101,7 @@
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="properties-table-body">
                             <tr id="prop-row-1">
                                 <td data-label="Property ID">#PR-9081</td>
                                 <td data-label="Listing Title" style="font-weight: 600;">Beverly Luxury Mansion</td>
@@ -202,6 +201,37 @@
                 row.style.opacity = '0.3';
                 setTimeout(() => {
                     row.remove();
+                    
+                    const tbody = document.getElementById('properties-table-body');
+                    const remainingRows = tbody ? tbody.getElementsByTagName('tr') : [];
+                    
+                    const activeBtn = document.getElementById('active-count-btn');
+                    const queryEl = document.getElementById('db-query-count');
+                    
+                    if (remainingRows.length === 0) {
+                        if (activeBtn) activeBtn.textContent = 'Active (0)';
+                        if (queryEl) queryEl.textContent = 'Database query: 0 records found.';
+                        
+                        const tableWrapper = document.querySelector('main section.dash-card div[style*="overflow-x: auto"]');
+                        if (tableWrapper) {
+                            tableWrapper.innerHTML = '<div style="text-align: center; padding: 3rem; color: var(--dash-green-dark); font-size: 1.1rem; font-weight: 600;">no more property listing</div>';
+                        }
+                    } else {
+                        if (activeBtn) {
+                            let match = activeBtn.textContent.match(/\d+/);
+                            if (match) {
+                                let val = parseInt(match[0]) - 1;
+                                activeBtn.textContent = `Active (${val < 0 ? 0 : val})`;
+                            }
+                        }
+                        if (queryEl) {
+                            let match = queryEl.textContent.match(/\d+/);
+                            if (match) {
+                                let val = parseInt(match[0]) - 1;
+                                queryEl.textContent = `Database query: ${val < 0 ? 0 : val} records found.`;
+                            }
+                        }
+                    }
                 }, 500);
             }
         }

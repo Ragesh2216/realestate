@@ -47,7 +47,7 @@
 
                 <nav id="navigation" class="style-1 head-tr">
                     <ul id="responsive">
-                        <li class="active"><a href="index.html">Home</a></li><li><a href="listing.html">Projects</a></li><li><a href="property.html">Property</a></li><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li class="mobile-only-login"><a href="login.html" class="btn-green" style="margin: 1rem 0; text-align: center; color: white !important; display: block; border-radius: var(--radius-sm);">Login</a></li>
+                        <li class="active"><a href="index.html">Home</a></li><li><a href="listing.html">Projects</a></li><li><a href="developer.html">Developers</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li class="mobile-only-login"><a href="login.html" class="btn-green" style="margin: 1rem 0; text-align: center; color: white !important; display: block; border-radius: var(--radius-sm);">Login</a></li>
                     </ul>
                 </nav>
                  
@@ -60,230 +60,72 @@
         </header>
         <div class="clearfix"></div>
 
-        <!-- STAR HEADER SEARCH -->
-        <section id="home" class="parallax-searchs section welcome-area overlay" style="position: relative; overflow: hidden; min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 6rem 0;">
-            <!-- Background Video -->
-            <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
-                <source src="images/videoplayback.mp4" type="video/mp4">
-            </video>
-            <!-- Dark Overlay to ensure readability -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); z-index: 2;"></div>
-            
-            <div class="hero-main" style="position: relative; z-index: 3; text-align: center; width: 100%;">
-                <div class="container">
-                    <div class="banner-inner" style="margin-bottom: 0;">
-                        <h1 class="title" style="margin-bottom: 1rem; color: var(--text-white); font-size: 3rem; font-weight: 800;">Find Your Dream Home</h1>
-                        <h5 class="sub-title" style="margin-bottom: 0; color: rgba(255, 255, 255, 0.9); font-size: 1.25rem;">We Have Over Million Properties For You</h5>
+        <!-- START NEW HERO & SEARCH SECTION -->
+        <section id="hero-section" class="hero-section-new">
+            <div class="hero-gradient-banner">
+                <div class="container hero-container-inner">
+                    <!-- Left Side: Skyline Image -->
+                    <div class="hero-image-col">
+                        <img src="images/hero-skyline.webp" alt="City Skyline" class="hero-skyline-img">
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEARCH CONTAINER UNDER HERO VIDEO -->
-        <section class="search-under-hero" style="background-color: var(--dark-bg); padding: 4rem 0; position: relative; z-index: 10;">
-            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-                <div class="banner-search-wrap" style="position: relative; top: 0; margin: 0 auto;">
-                    <ul class="nav nav-tabs rld-banner-tab">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#tabs_1">For Sale</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tabs_2">For Rent</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- Tab 1: Sale Form -->
-                        <div class="tab-pane show active" id="tabs_1">
-                            <div class="rld-main-search">
-                                <div class="row">
-                                    <div class="rld-single-input">
-                                        <input type="text" placeholder="Enter Keyword...">
-                                    </div>
-                                    <div class="rld-single-select">
-                                        <select class="select single-select">
-                                            <option value="1">Property Type</option>
-                                            <option value="2">Family House</option>
-                                            <option value="3">Apartment</option>
-                                            <option value="4">Condo</option>
-                                        </select>
-                                    </div>
-                                    <div class="rld-single-select">
-                                        <select class="select single-select">
-                                            <option value="1">Location</option>
-                                            <option value="2">Los Angeles</option>
-                                            <option value="3">Chicago</option>
-                                            <option value="4">Philadelphia</option>
-                                            <option value="5">San Francisco</option>
-                                            <option value="6">Miami</option>
-                                            <option value="7">Houston</option>
-                                            <option value="8">New York</option>
-                                            <option value="9">Boston</option>
-                                            <option value="10">Seattle</option>
-                                        </select>
-                                    </div>
-                                    <div class="dropdown-filter"><span>Advanced Search</span> <i class="fa-solid fa-angle-down"></i></div>
-                                    <div class="search-btn-container">
-                                        <a class="btn btn-yellow" href="404.html" onclick="validateSearch(event, 'tabs_1')"><i class="fa-solid fa-magnifying-glass"></i> Search Now</a>
-                                    </div>
-
-                                    <!-- Collapsible Advanced Search -->
-                                    <div class="explore__form-checkbox-list">
-                                        <div class="row">
-                                            <div class="form-group categories">
-                                                <select class="form-control">
-                                                    <option value="1">Property Status</option>
-                                                    <option value="2">For Sale</option>
-                                                    <option value="3">For Rent</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group beds">
-                                                <select class="form-control">
-                                                    <option value="1">Bedrooms</option>
-                                                    <option value="2">1</option>
-                                                    <option value="3">2</option>
-                                                    <option value="4">3</option>
-                                                    <option value="5">4+</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group bath">
-                                                <select class="form-control">
-                                                    <option value="1">Bathrooms</option>
-                                                    <option value="2">1</option>
-                                                    <option value="3">2</option>
-                                                    <option value="4">3+</option>
-                                                </select>
-                                            </div>
-                                            <!-- Area and Price Range Sliders -->
-                                            <div class="main-search-field-2">
-                                                <div class="range-slider">
-                                                    <label>Area Size: <span id="area-val" class="val-display">650 sq ft</span></label>
-                                                    <input type="range" id="area-slider" min="100" max="5000" value="650">
-                                                </div>
-                                                <div class="range-slider">
-                                                    <label>Price Range: <span id="price-val" class="val-display">$300,000</span></label>
-                                                    <input type="range" id="price-slider" min="10000" max="2000000" value="30000">
-                                                </div>
-                                            </div>
-                                            <!-- Features Checkboxes -->
-                                            <div class="checkboxes">
-                                                <label><input type="checkbox" name="check"> Air Conditioning</label>
-                                                <label><input type="checkbox" name="check"> Swimming Pool</label>
-                                                <label><input type="checkbox" name="check"> Central Heating</label>
-                                                <label><input type="checkbox" name="check"> Laundry Room</label>
-                                                <label><input type="checkbox" name="check"> Gym</label>
-                                                <label><input type="checkbox" name="check"> Alarm</label>
-                                            </div>
-                                            <div class="checkboxes">
-                                                <label><input type="checkbox" name="check"> WiFi</label>
-                                                <label><input type="checkbox" name="check"> TV Cable</label>
-                                                <label><input type="checkbox" name="check"> Dryer</label>
-                                                <label><input type="checkbox" name="check"> Microwave</label>
-                                                <label><input type="checkbox" name="check"> Washer</label>
-                                                <label><input type="checkbox" name="check"> Refrigerator</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tab 2: Rent Form -->
-                        <div class="tab-pane" id="tabs_2">
-                            <div class="rld-main-search">
-                                <div class="row">
-                                    <div class="rld-single-input">
-                                        <input type="text" placeholder="Enter Keyword...">
-                                    </div>
-                                    <div class="rld-single-select">
-                                        <select class="select single-select">
-                                            <option value="1">Property Type</option>
-                                            <option value="2">Family House</option>
-                                            <option value="3">Apartment</option>
-                                            <option value="4">Condo</option>
-                                        </select>
-                                    </div>
-                                    <div class="rld-single-select">
-                                        <select class="select single-select">
-                                            <option value="1">Location</option>
-                                            <option value="2">Los Angeles</option>
-                                            <option value="3">Chicago</option>
-                                            <option value="4">Philadelphia</option>
-                                            <option value="5">San Francisco</option>
-                                            <option value="6">Miami</option>
-                                            <option value="7">Houston</option>
-                                            <option value="8">New York</option>
-                                            <option value="9">Boston</option>
-                                            <option value="10">Seattle</option>
-                                        </select>
-                                    </div>
-                                    <div class="dropdown-filter"><span>Advanced Search</span> <i class="fa-solid fa-angle-down"></i></div>
-                                    <div class="search-btn-container">
-                                        <a class="btn btn-yellow" href="404.html" onclick="validateSearch(event, 'tabs_2')"><i class="fa-solid fa-magnifying-glass"></i> Search Now</a>
-                                    </div>
-
-                                    <!-- Collapsible Advanced Search -->
-                                    <div class="explore__form-checkbox-list">
-                                        <div class="row">
-                                            <div class="form-group categories">
-                                                <select class="form-control">
-                                                    <option value="1">Property Status</option>
-                                                    <option value="2">For Sale</option>
-                                                    <option value="3">For Rent</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group beds">
-                                                <select class="form-control">
-                                                    <option value="1">Bedrooms</option>
-                                                    <option value="2">1</option>
-                                                    <option value="3">2</option>
-                                                    <option value="4">3</option>
-                                                    <option value="5">4+</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group bath">
-                                                <select class="form-control">
-                                                    <option value="1">Bathrooms</option>
-                                                    <option value="2">1</option>
-                                                    <option value="3">2</option>
-                                                    <option value="4">3+</option>
-                                                </select>
-                                            </div>
-                                            <div class="main-search-field-2">
-                                                <div class="range-slider">
-                                                    <label>Area Size: <span id="area-val-rent" class="val-display">400 sq ft</span></label>
-                                                    <input type="range" id="area-slider-rent" min="100" max="3000" value="400">
-                                                </div>
-                                                <div class="range-slider">
-                                                    <label>Price Range: <span id="price-val-rent" class="val-display">$2,500</span></label>
-                                                    <input type="range" id="price-slider-rent" min="500" max="50000" value="2500">
-                                                </div>
-                                            </div>
-                                            <div class="checkboxes">
-                                                <label><input type="checkbox" name="check"> Air Conditioning</label>
-                                                <label><input type="checkbox" name="check"> Swimming Pool</label>
-                                                <label><input type="checkbox" name="check"> Central Heating</label>
-                                                <label><input type="checkbox" name="check"> Laundry Room</label>
-                                                <label><input type="checkbox" name="check"> Gym</label>
-                                                <label><input type="checkbox" name="check"> Alarm</label>
-                                            </div>
-                                            <div class="checkboxes">
-                                                <label><input type="checkbox" name="check"> WiFi</label>
-                                                <label><input type="checkbox" name="check"> TV Cable</label>
-                                                <label><input type="checkbox" name="check"> Dryer</label>
-                                                <label><input type="checkbox" name="check"> Microwave</label>
-                                                <label><input type="checkbox" name="check"> Washer</label>
-                                                <label><input type="checkbox" name="check"> Refrigerator</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Right Side: Text & Buttons -->
+                    <div class="hero-text-col">
+                        <h1 class="hero-title">Homes built for how you actually live.</h1>
+                        <p class="hero-subtitle">Curated residences, master-planned developments, and vetted developers across the region's most sought-after addresses.</p>
+                        <div class="hero-buttons">
+                            <a href="404.html" class="btn btn-dark-green">Browse Properties</a>
+                            <a href="404.html" class="btn btn-outline-white">Book a Viewing</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Floating Search Bar -->
+            <div class="hero-search-bar-container">
+                <div class="hero-search-bar">
+                    <div class="search-field">
+                        <span class="field-label">LOCATION</span>
+                        <span class="field-value">Downtown Core</span>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-field">
+                        <span class="field-label">BUDGET</span>
+                        <span class="field-value">$400k - $700k</span>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-field">
+                        <span class="field-label">PROPERTY TYPE</span>
+                        <span class="field-value">Apartment</span>
+                    </div>
+                    <a href="404.html" class="search-submit-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="hero-stats-container">
+                <div class="container stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">128</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">3,400+</span>
+                        <span class="stat-label">Properties</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">42</span>
+                        <span class="stat-label">Developers</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Cities</span>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- END HEADER SEARCH -->
+        <!-- END NEW HERO & SEARCH SECTION -->
 
         <!-- START SECTION RECENTLY PROPERTIES -->
         <section class="recently portfolio bg-white-2">
@@ -304,7 +146,6 @@
                                         <img src="images/prop-1.webp" alt="Modern pool house decoration" />
                                     </a>
                                     <div class="button-effect">
-                                        <a href="property.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
                                         <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
                                         <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
                                     </div>
@@ -323,7 +164,7 @@
                                     <div class="price-properties">
                                         <span class="price-val">$150,000</span>
                                         <div class="compare">
-                                            <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                             <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                             <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                         </div>
@@ -339,7 +180,6 @@
                                         <img src="images/prop-2.webp" alt="Spacious property estate front view" />
                                     </a>
                                     <div class="button-effect">
-                                        <a href="property.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
                                         <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
                                         <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
                                     </div>
@@ -358,7 +198,7 @@
                                     <div class="price-properties">
                                         <span class="price-val">$8,500/mo</span>
                                         <div class="compare">
-                                            <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                             <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                             <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                         </div>
@@ -374,7 +214,6 @@
                                         <img src="images/prop-3.webp" alt="Modern architecture glasshouse" />
                                     </a>
                                     <div class="button-effect">
-                                        <a href="property.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
                                         <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
                                         <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
                                     </div>
@@ -393,7 +232,7 @@
                                     <div class="price-properties">
                                         <span class="price-val">$210,000</span>
                                         <div class="compare">
-                                            <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                             <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                             <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                         </div>
@@ -409,7 +248,6 @@
                                         <img src="images/prop-4.webp" alt="Beautiful brick luxury house" />
                                     </a>
                                     <div class="button-effect">
-                                        <a href="property.html" class="btn" title="Link"><i class="fa-solid fa-link"></i></a>
                                         <a href="404.html" class="btn" title="Video"><i class="fa-solid fa-video"></i></a>
                                         <a href="404.html" class="btn" title="Photo"><i class="fa-regular fa-image"></i></a>
                                     </div>
@@ -428,7 +266,7 @@
                                     <div class="price-properties">
                                         <span class="price-val">$325,000</span>
                                         <div class="compare">
-                                            <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                            <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                             <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                             <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                         </div>
@@ -510,7 +348,6 @@
                                 <img src="images/prop-5.webp" alt="Beautiful forest estate" />
                             </a>
                             <div class="button-effect">
-                                <a href="property.html" class="btn"><i class="fa-solid fa-link"></i></a>
                                 <a href="404.html" class="btn"><i class="fa-solid fa-video"></i></a>
                                 <a href="404.html" class="btn"><i class="fa-regular fa-image"></i></a>
                             </div>
@@ -529,7 +366,7 @@
                             <div class="price-properties">
                                 <span class="price-val">$230,000</span>
                                 <div class="compare">
-                                    <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                     <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                     <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                 </div>
@@ -545,7 +382,6 @@
                                 <img src="images/prop-6.webp" alt="Cozy city apartment" />
                             </a>
                             <div class="button-effect">
-                                <a href="property.html" class="btn"><i class="fa-solid fa-link"></i></a>
                                 <a href="404.html" class="btn"><i class="fa-solid fa-video"></i></a>
                                 <a href="404.html" class="btn"><i class="fa-regular fa-image"></i></a>
                             </div>
@@ -564,7 +400,7 @@
                             <div class="price-properties">
                                 <span class="price-val">$1,850/mo</span>
                                 <div class="compare">
-                                    <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                     <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                     <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                 </div>
@@ -580,7 +416,6 @@
                                 <img src="images/prop-7.webp" alt="Cozy apartment sunlit living room" />
                             </a>
                             <div class="button-effect">
-                                <a href="property.html" class="btn"><i class="fa-solid fa-link"></i></a>
                                 <a href="404.html" class="btn"><i class="fa-solid fa-video"></i></a>
                                 <a href="404.html" class="btn"><i class="fa-regular fa-image"></i></a>
                             </div>
@@ -599,7 +434,7 @@
                             <div class="price-properties">
                                 <span class="price-val">$480,000</span>
                                 <div class="compare">
-                                    <a href="property.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="404.html" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
                                     <a href="404.html" title="Share"><i class="fa-solid fa-share-nodes"></i></a>
                                     <a href="404.html" title="Favorites"><i class="fa-regular fa-heart"></i></a>
                                 </div>
@@ -646,7 +481,7 @@
                         </a>
                     </div>
                     <!-- San Francisco -->
-                    <div class="col-lg-8" style="margin-top: 2rem;">
+                    <div class="col-lg-8">
                         <a href="404.html" class="img-box hover-effect">
                             <img src="images/place-sf.webp" alt="San Francisco Golden Gate Bridge" />
                             <div class="img-box-content">
@@ -656,7 +491,7 @@
                         </a>
                     </div>
                     <!-- Miami -->
-                    <div class="col-lg-4" style="margin-top: 2rem;">
+                    <div class="col-lg-4">
                         <a href="404.html" class="img-box hover-effect">
                             <img src="images/place-miami.webp" alt="Miami beach landscape" />
                             <div class="listing-badges">
@@ -791,9 +626,9 @@
                                 <div class="news-item-bottom">
                                     <a href="404.html" class="news-link">Read more...</a>
                                     <ul class="action-list">
-                                        <li><i class="fa-regular fa-heart"></i> <span>306</span></li>
-                                        <li><i class="fa-regular fa-comment"></i> <span>34</span></li>
-                                        <li><i class="fa-solid fa-share-nodes"></i> <span>122</span></li>
+                                        <li><a href="404.html" class="action-btn-link"><i class="fa-regular fa-heart"></i> <span>306</span></a></li>
+                                        <li><a href="404.html" class="action-btn-link"><i class="fa-regular fa-comment"></i> <span>34</span></a></li>
+                                        <li><a href="404.html" class="action-btn-link"><i class="fa-solid fa-share-nodes"></i> <span>122</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -814,9 +649,9 @@
                                 <div class="news-item-bottom">
                                     <a href="404.html" class="news-link">Read more...</a>
                                     <ul class="action-list">
-                                        <li><i class="fa-regular fa-heart"></i> <span>280</span></li>
-                                        <li><i class="fa-regular fa-comment"></i> <span>41</span></li>
-                                        <li><i class="fa-solid fa-share-nodes"></i> <span>94</span></li>
+                                        <li><a href="404.html" class="action-btn-link"><i class="fa-regular fa-heart"></i> <span>280</span></a></li>
+                                        <li><a href="404.html" class="action-btn-link"><i class="fa-regular fa-comment"></i> <span>41</span></a></li>
+                                        <li><a href="404.html" class="action-btn-link"><i class="fa-solid fa-share-nodes"></i> <span>94</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -907,20 +742,7 @@
                                 </ul>
                                 <p>"As a broker, the administrative approval process is so fast. My listings are live within minutes, attracting qualified leads immediately."</p>
                             </div>
-                            <!-- Testimonial 6 -->
-                            <div class="carousel-slide test-1">
-                                <h3> David Miller</h3>
-                                <img src="images/agent-3.webp" alt="David Miller" />
-                                <h6>Houston</h6>
-                                <ul class="starts">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p>"The mobile interface made scheduling tours with local agents very straightforward. I found my dream duplex while commuting!"</p>
-                            </div>
+                          
                         </div>
                     </div>
                     <!-- Controls -->
@@ -1061,6 +883,33 @@
                             <p style="line-height: 1.6; font-size: 0.9rem;">Our local agents manually inspect all featured residences to confirm structural conditions, blueprint alignments, amenities lists, and seller documentation details before listing activation.</p>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can I schedule a physical or virtual property viewing?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="line-height: 1.6; font-size: 0.9rem;">Yes, you can schedule viewings online by clicking "Book a Viewing" on any property listing page or contacting the listed agent directly.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Are there any commissions or listing fees for sellers?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="line-height: 1.6; font-size: 0.9rem;">Stackly offers free listings for individual homeowners. Verified agents and premium brokers can choose from our tiered subscription options for advanced promotion tools.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>How long does it take for my property listing to go live?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="line-height: 1.6; font-size: 0.9rem;">Once you submit a property listing, our verification team reviews the details within 12 to 24 hours. Once verified, your listing goes live instantly.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1075,7 +924,7 @@
                         <div class="col-lg-3">
                             <div class="netabout">
                                 <a href="index.html" class="logo">
-                                    <img src="images/stackly-logo%20golden.webp" alt="Stackly logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle;">
+                                    <img src="images/logo-stackly.png" alt="Stackly logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle;">
                                 </a>
                                 <p>Simplifying the process of renting, buying, and advertising properties. Premium real estate layouts made accessible.</p>
                             </div>
@@ -1085,7 +934,7 @@
                                         <div class="info">
                                             <i class="fa-solid fa-map-marker-alt"></i>
                                             <p>
-                                               STACKLY , phase1 salem - 636006</p>
+                                               MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
                                         </div>
                                     </li>
                                     <li>
@@ -1111,12 +960,10 @@ info@stackly.com</p>
                                 <h3>Navigation</h3>
                                 <div class="nav-footer">
                                     <ul>
-                                        <li><a href="index.html">Home </a></li>
+                                         <li><a href="index.html">Home </a></li>
                                          <li><a href="about.html">About Us</a></li>
                                          <li><a href="contact.html">Contact Us</a></li>
-                                    
-                                        <li><a href="property.html">Property </a></li>
-                                        <li><a href="listing.html">Projects</a></li>
+                                         <li><a href="listing.html">Projects</a></li>
                                     </ul>
                                     <ul class="nav-right">
                                         </ul>
@@ -1166,7 +1013,7 @@ info@stackly.com</p>
             <!-- Copyright -->
             <div class="second-footer">
                 <div class="container">
-                    <p>2026 Ã‚Â© Copyright - All Rights Reserved.</p>
+                    <p>2026 @ Copyright - All Rights Reserved.</p>
                     <ul class="netsocials">
                         <li><a href="404.html"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="404.html"><i class="fa-brands fa-twitter"></i></a></li>
