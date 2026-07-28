@@ -743,7 +743,7 @@ img {
 
 /* 3. Section Common */
 section {
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 .bg-white-2 {
@@ -1441,7 +1441,7 @@ section {
 /* 11. Footer */
 .first-footer {
     background-color: var(--dark-bg);
-    color: var(--text-light);
+    color: #ffffff;
     padding-top: 5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -1539,16 +1539,20 @@ section {
 }
 
 .single-item .icon-holder i {
-    color: var(--accent);
+    color: #ffffff;
+}
+
+.single-item .text h5 {
+    color: #ffffff;
 }
 
 .single-item .text h5 a {
-    color: var(--accent);
+    color: #ffffff;
 }
 
 .single-item .text h4 {
     font-size: 0.7rem;
-    color: var(--text-light);
+    color: #ffffff;
     margin-top: 0.25rem;
     font-weight: 500;
 }
@@ -1594,7 +1598,8 @@ section {
 
 .second-footer {
     padding: 2rem 0;
-    background-color: #082f1a;
+    background-color: #0f3d21;
+    color: #ffffff;
     font-size: 0.85rem;
 }
 
@@ -1613,7 +1618,7 @@ section {
 }
 
 .netsocials a {
-    color: var(--text-light);
+    color: #ffffff;
     font-size: 1.1rem;
 }
 

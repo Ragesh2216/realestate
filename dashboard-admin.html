@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,20 +16,14 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-inner">
-            <img src="images/stackly-logo%20golden.webp" alt="Stackly Logo" class="preloader-logo">
-            <div class="preloader-spinner" style="border-top-color: var(--dash-green-primary);"></div>
-        </div>
-    </div>
 
     <!-- Dashboard Container -->
     <div class="dash-container">
         <!-- Mobile Header -->
         <div class="dash-mobile-header">
-            <div class="dash-logo" style="font-size: 1.25rem;">
-                <i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span>
+            <div class="dash-logo" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.25rem;">
+                <img src="images/stackly-logo golden.webp" alt="Stackly logo" style="height: 28px; width: auto; object-fit: contain;">
+                <span style="font-size: 1.1rem; font-weight: 700; color: white;">Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
             </div>
             <button class="dash-mobile-toggle" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -39,7 +33,10 @@
         <!-- Sidebar Navigation -->
         <aside class="dash-sidebar" id="dash-sidebar">
             <div class="dash-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                <span><i class="fa-solid fa-user-shield"></i> Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                <span style="display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="images/stackly-logo golden.webp" alt="Stackly logo" style="height: 32px; width: auto; object-fit: contain;">
+                    <span style="font-size: 1.1rem; font-weight: 700; color: white;">Admin<span style="color: var(--dash-green-primary);">Portal</span></span>
+                </span>
                 <button class="dash-sidebar-close" onclick="toggleMobileSidebar(false)" aria-label="Close Navigation"><i class="fa-solid fa-times"></i></button>
             </div>
             <nav class="dash-menu">
@@ -63,11 +60,13 @@
             <header class="dash-header">
                 <div>
                     <h2 style="margin: 0; color: var(--dash-green-darkest); font-size: 1.5rem;">Administrator Workspace</h2>
-                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--dash-green-dark); font-weight: 500;">Welcome back, System Admin! System Status: All services operational. Core load: 24%.</p>
                 </div>
                 <div class="dash-user-info">
-                    <span>SysAdmin</span>
-                    <div class="dash-user-avatar">SA</div>
+                    <div style="text-align: right; margin-right: 0.5rem;">
+                        <span style="font-weight: 600; display: block;" id="dash-user-name">SysAdmin</span>
+                        <span style="font-size: 0.75rem; color: var(--dash-green-dark); display: block;" id="dash-user-email">admin@stackly.com</span>
+                    </div>
+                    <div class="dash-user-avatar" id="dash-user-avatar">SA</div>
                 </div>
             </header>
 
@@ -219,12 +218,30 @@
     <!-- Scripts -->
     <script>
         window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
-            if (preloader) {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500);
+            
+
+            // Dynamic User Info
+            const userEmail = localStorage.getItem('userEmail') || 'admin@stackly.com';
+            const userName = localStorage.getItem('userName') || 'System Admin';
+
+            const emailEl = document.getElementById('dash-user-email');
+            if (emailEl) emailEl.textContent = userEmail;
+
+            const nameEl = document.getElementById('dash-user-name');
+            if (nameEl) nameEl.textContent = userName;
+
+            const welcomeEl = document.getElementById('welcome-message');
+            if (welcomeEl) {
+                welcomeEl.innerHTML = `Welcome back, <strong>${userName}</strong> (${userEmail})! System Status: All services operational. Core load: 24%.`;
+            }
+
+            const avatarEl = document.getElementById('dash-user-avatar');
+            if (avatarEl) {
+                const parts = userName.split(' ');
+                let initials = '';
+                if (parts[0]) initials += parts[0].charAt(0).toUpperCase();
+                if (parts[1]) initials += parts[1].charAt(0).toUpperCase();
+                if (initials) avatarEl.textContent = initials;
             }
         });
 
@@ -253,11 +270,9 @@
         function rejectListing(rowId) {
             const row = document.getElementById(rowId);
             if (row) {
-                if (confirm('Are you sure you want to reject/remove this listing?')) {
-                    row.style.opacity = '0.4';
-                    row.style.backgroundColor = '#fee2e2';
-                    row.querySelector('td:last-child').innerHTML = '<span class="dash-badge" style="background-color: #ef4444; color: white;">Rejected</span>';
-                }
+                row.style.opacity = '0.4';
+                row.style.backgroundColor = '#fee2e2';
+                row.querySelector('td:last-child').innerHTML = '<span class="dash-badge" style="background-color: #ef4444; color: white;">Rejected</span>';
             }
         }
     </script>

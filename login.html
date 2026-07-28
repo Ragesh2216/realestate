@@ -134,7 +134,7 @@
                                 </div>
                                 <div style="position: relative;">
                                     <i class="fa-solid fa-lock" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-light);"></i>
-                                    <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem;">
+                                    <input type="password" placeholder="*********" required style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem;">
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
@@ -147,7 +147,21 @@
 
                     <!-- Sign Up Tab Content -->
                     <div id="auth-content-signup" style="display: none;">
-                        <form onsubmit="event.preventDefault(); window.location.href='404.html';" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <form onsubmit="handleSignupSubmit(event);" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <!-- Role Selection -->
+                            <div>
+                                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; display: block;">Sign Up As *</label>
+                                <div class="user-role-selector" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <label id="signup-role-label-client" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem; border: 2px solid #22c55e; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: var(--transition); background-color: #22c55e; color: white; text-align: center; user-select: none;">
+                                        <input type="radio" name="signup-user-role" value="client" checked style="display: none;" onchange="handleSignupRoleChange('client')">
+                                        <i class="fa-solid fa-user"></i> Client
+                                    </label>
+                                    <label id="signup-role-label-admin" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: var(--transition); background-color: white; color: var(--text-secondary); text-align: center; user-select: none;">
+                                        <input type="radio" name="signup-user-role" value="admin" style="display: none;" onchange="handleSignupRoleChange('admin')">
+                                        <i class="fa-solid fa-user-shield"></i> Admin
+                                    </label>
+                                </div>
+                            </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                                 <div>
                                     <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; display: block;">First Name *</label>
@@ -169,7 +183,7 @@
                                 <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; display: block;">Create Password *</label>
                                 <div style="position: relative;">
                                     <i class="fa-solid fa-lock" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-light);"></i>
-                                    <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem;">
+                                    <input type="password" placeholder="*********" required style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 0.9rem;">
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
@@ -360,6 +374,72 @@
             event.preventDefault();
             const roleInput = document.querySelector('input[name="user-role"]:checked');
             const role = roleInput ? roleInput.value : 'client';
+            
+            const emailInput = event.target.querySelector('input[placeholder="name@example.com"]');
+            if (emailInput && emailInput.value) {
+                localStorage.setItem('userEmail', emailInput.value);
+                const email = emailInput.value;
+                const namePart = email.split('@')[0];
+                const capitalizedName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+                localStorage.setItem('userName', capitalizedName);
+            } else {
+                localStorage.setItem('userEmail', role === 'admin' ? 'admin@stackly.com' : 'mary.jane@example.com');
+                localStorage.setItem('userName', role === 'admin' ? 'System Admin' : 'Mary Jane');
+            }
+            
+            if (role === 'admin') {
+                window.location.href = 'dashboard-admin.html';
+            } else {
+                window.location.href = 'dashboard-client.html';
+            }
+        }
+        
+        function handleSignupRoleChange(role) {
+            const clientLabel = document.getElementById('signup-role-label-client');
+            const adminLabel = document.getElementById('signup-role-label-admin');
+            
+            if (role === 'client') {
+                clientLabel.style.backgroundColor = '#22c55e';
+                clientLabel.style.borderColor = '#22c55e';
+                clientLabel.style.color = '#ffffff';
+                
+                adminLabel.style.backgroundColor = '#ffffff';
+                adminLabel.style.borderColor = 'var(--border-color)';
+                adminLabel.style.color = 'var(--text-secondary)';
+            } else {
+                adminLabel.style.backgroundColor = '#22c55e';
+                adminLabel.style.borderColor = '#22c55e';
+                adminLabel.style.color = '#ffffff';
+                
+                clientLabel.style.backgroundColor = '#ffffff';
+                clientLabel.style.borderColor = 'var(--border-color)';
+                clientLabel.style.color = 'var(--text-secondary)';
+            }
+        }
+        
+        function handleSignupSubmit(event) {
+            event.preventDefault();
+            const roleInput = document.querySelector('input[name="signup-user-role"]:checked');
+            const role = roleInput ? roleInput.value : 'client';
+            
+            const firstNameInput = event.target.querySelector('input[placeholder="John"]');
+            const lastNameInput = event.target.querySelector('input[placeholder="Doe"]');
+            const emailInput = event.target.querySelector('input[type="email"]');
+            
+            if (emailInput && emailInput.value) {
+                localStorage.setItem('userEmail', emailInput.value);
+            } else {
+                localStorage.setItem('userEmail', role === 'admin' ? 'admin@stackly.com' : 'mary.jane@example.com');
+            }
+            
+            if (firstNameInput && firstNameInput.value) {
+                const fName = firstNameInput.value;
+                const lName = (lastNameInput && lastNameInput.value) ? lastNameInput.value : '';
+                localStorage.setItem('userName', (fName + ' ' + lName).trim());
+            } else {
+                localStorage.setItem('userName', role === 'admin' ? 'System Admin' : 'Mary Jane');
+            }
+            
             if (role === 'admin') {
                 window.location.href = 'dashboard-admin.html';
             } else {
