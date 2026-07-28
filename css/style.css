@@ -3311,21 +3311,32 @@ body.mmenu-active #header-container {
     }
     
     .dash-grid-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
 
 @media (max-width: 480px) {
+    .dash-mobile-header {
+        padding: 0.75rem 1rem;
+    }
     .dash-main {
-        padding: 1rem;
+        padding: 0.75rem;
+        gap: 1.25rem;
     }
     .dash-header {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.75rem;
         align-items: flex-start;
+        padding: 1rem;
     }
     .dash-card {
+        padding: 1rem 0.75rem;
+    }
+    .dash-card-stat {
         padding: 1rem;
+    }
+    .dash-grid-stats {
+        gap: 1rem;
     }
 }
 
@@ -3336,5 +3347,79 @@ body.mmenu-active #header-container {
 @media (max-width: 768px) {
     .testimonials-mobile-btn {
         display: block !important;
+    }
+}
+
+/* Responsive Tables for dashboards under 600px */
+@media (max-width: 600px) {
+    .dash-table, 
+    .dash-table tbody, 
+    .dash-table tr, 
+    .dash-table td { 
+        display: block !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .dash-table thead { 
+        display: none !important;
+    }
+    
+    .dash-table tr { 
+        border: 1px solid var(--dash-green-border) !important;
+        border-radius: var(--radius-sm) !important;
+        margin-bottom: 1.25rem !important;
+        padding: 0.5rem !important;
+        background-color: var(--dash-green-light) !important;
+    }
+    
+    .dash-table td { 
+        border: none !important;
+        border-bottom: 1px dashed var(--dash-green-border) !important; 
+        position: relative !important;
+        padding: 0.75rem 0.75rem 0.75rem 45% !important; 
+        text-align: right !important;
+        min-height: 2.25rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+    }
+    
+    .dash-table td:last-child {
+        border-bottom: none !important;
+    }
+    
+    .dash-table td:before { 
+        content: attr(data-label) !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 0.75rem !important;
+        width: 40% !important; 
+        padding-right: 10px !important; 
+        white-space: nowrap !important;
+        text-align: left !important;
+        font-weight: 700 !important;
+        color: var(--dash-green-dark) !important;
+        transform: translateY(-50%) !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Stacking card title div content under 480px */
+@media (max-width: 480px) {
+    .dash-card-title div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.75rem !important;
+    }
+    .dash-card-title div a {
+        align-self: flex-start !important;
+    }
+}
+
+/* Shift footer navigation in desktop view a little to the right */
+@media (min-width: 992px) {
+    footer .navigation {
+        padding-left: 3.5rem;
     }
 }

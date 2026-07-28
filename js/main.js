@@ -375,4 +375,117 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollElements.forEach(el => {
         scrollObserver.observe(el);
     });
+
+    // 15. Property Filtering Logic (listing.html)
+    const filterLocation = document.getElementById('filter-location');
+    const filterType = document.getElementById('filter-type');
+    const filterStatus = document.getElementById('filter-status');
+    const filterKeyword = document.getElementById('filter-keyword');
+    const filterApplyBtn = document.getElementById('filter-apply-btn');
+    const propertyCards = document.querySelectorAll('.listing-container .project-single');
+    const noPropertiesMsg = document.getElementById('no-properties-message');
+    const resultsCountSpan = document.getElementById('results-count-span');
+
+    if (propertyCards.length > 0 && filterApplyBtn) {
+        // Function to filter properties
+        const filterProperties = () => {
+            const locVal = filterLocation ? filterLocation.value : 'All Locations';
+            const typeVal = filterType ? filterType.value : 'All Types';
+            const statusVal = filterStatus ? filterStatus.value : 'Any Status';
+            const keywordVal = filterKeyword ? filterKeyword.value.trim().toLowerCase() : '';
+
+            let visibleCount = 0;
+
+            propertyCards.forEach(card => {
+                const cardLoc = card.getAttribute('data-location') || '';
+                const cardType = card.getAttribute('data-type') || '';
+                const cardStatus = card.getAttribute('data-status') || '';
+                const cardKeyword = card.getAttribute('data-keyword') || '';
+
+                // Matching conditions
+                const matchLoc = (locVal === 'All Locations' || cardLoc.toLowerCase() === locVal.toLowerCase());
+                const matchType = (typeVal === 'All Types' || cardType.toLowerCase() === typeVal.toLowerCase());
+                const matchStatus = (statusVal === 'Any Status' || cardStatus.toLowerCase() === statusVal.toLowerCase());
+                
+                // Keyword match: checks if card's data-keyword contains the keyword string
+                const matchKeyword = (keywordVal === '' || cardKeyword.toLowerCase().includes(keywordVal));
+
+                if (matchLoc && matchType && matchStatus && matchKeyword) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update visible results count
+            if (resultsCountSpan) {
+                resultsCountSpan.textContent = visibleCount;
+            }
+
+            // Toggle Empty State Message
+            if (noPropertiesMsg) {
+                noPropertiesMsg.style.display = (visibleCount === 0) ? 'block' : 'none';
+            }
+        };
+
+        // Initialize filters from URL query parameters (if page loaded via homepage search)
+        const initFiltersFromUrl = () => {
+            const params = new URLSearchParams(window.location.search);
+            const urlKeyword = params.get('keyword');
+            const urlType = params.get('type');
+            const urlLocation = params.get('location');
+            const urlStatus = params.get('status');
+
+            let hasUrlParams = false;
+
+            if (urlKeyword && filterKeyword) {
+                filterKeyword.value = urlKeyword;
+                hasUrlParams = true;
+            }
+
+            if (urlType && filterType) {
+                // Find matching option (case insensitive)
+                for (let i = 0; i < filterType.options.length; i++) {
+                    if (filterType.options[i].text.toLowerCase() === urlType.toLowerCase()) {
+                        filterType.selectedIndex = i;
+                        hasUrlParams = true;
+                        break;
+                    }
+                }
+            }
+
+            if (urlLocation && filterLocation) {
+                for (let i = 0; i < filterLocation.options.length; i++) {
+                    if (filterLocation.options[i].text.toLowerCase() === urlLocation.toLowerCase()) {
+                        filterLocation.selectedIndex = i;
+                        hasUrlParams = true;
+                        break;
+                    }
+                }
+            }
+
+            if (urlStatus && filterStatus) {
+                for (let i = 0; i < filterStatus.options.length; i++) {
+                    if (filterStatus.options[i].text.toLowerCase() === urlStatus.toLowerCase()) {
+                        filterStatus.selectedIndex = i;
+                        hasUrlParams = true;
+                        break;
+                    }
+                }
+            }
+
+            // Always run the filter function on load (ensuring url params or defaults are correctly rendered)
+            filterProperties();
+        };
+
+        // Attach Event Listeners
+        filterApplyBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            filterProperties();
+        });
+
+        // Run Initialization
+        initFiltersFromUrl();
+    }
 });

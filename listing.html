@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -76,7 +76,7 @@
         <main class="container" style="max-width: 1200px; margin: 4rem auto; padding: 0 2rem;">
             <div class="listing-toolbar">
                 <div style="font-size: 0.9rem; font-weight: 500;">
-                    Showing <span style="color: var(--primary); font-weight: 700;">1â€“6 of 12</span> Results
+                    Showing <span id="results-count-span" style="color: var(--primary); font-weight: 700;">6</span> Results
                 </div>
                 <div class="view-toggle">
                     <a href="404.html" id="view-grid" class="active" title="Grid View"><i class="fa-solid fa-grip"></i></a>
@@ -89,8 +89,15 @@
                 
                 <!-- SECTION 4: MAIN LISTING CONTENT (GRID OF 6 CARDS) -->
                 <div class="listing-container grid-layout">
+                    <!-- No Properties Found Message -->
+                    <div id="no-properties-message" style="display: none; grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--light-surface); border: 1px dashed var(--border-color); border-radius: var(--radius-md); width: 100%;">
+                        <i class="fa-solid fa-house-chimney-crack" style="font-size: 3rem; color: var(--text-light); margin-bottom: 1.5rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">No Properties Found</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">Try adjusting your filters or keyword search.</p>
+                    </div>
+
                     <!-- Card 1 -->
-                    <div class="project-single">
+                    <div class="project-single" data-location="New York" data-type="Family House" data-status="For Sale" data-keyword="real house luxury villa nyc new york central park">
                         <div class="project-inner">
                             <div class="homes-tag featured">Featured</div>
                             <div class="homes-tag sale">For Sale</div>
@@ -125,7 +132,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="project-single">
+                    <div class="project-single" data-location="Los Angeles" data-type="Family House" data-status="For Rent" data-keyword="beverly hills mansion la los angeles sunset blvd">
                         <div class="project-inner">
                             <div class="homes-tag featured">Featured</div>
                             <div class="homes-tag rent">For Rent</div>
@@ -160,7 +167,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="project-single">
+                    <div class="project-single" data-location="San Francisco" data-type="Family House" data-status="For Sale" data-keyword="modern glass villa san francisco ca pine ave">
                         <div class="project-inner">
                             <div class="homes-tag featured">Featured</div>
                             <div class="homes-tag sale">For Sale</div>
@@ -195,7 +202,7 @@
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="project-single">
+                    <div class="project-single" data-location="Boston" data-type="Family House" data-status="For Sale" data-keyword="luxury brick estate boston ma maple dr">
                         <div class="project-inner">
                             <div class="homes-tag featured">Featured</div>
                             <div class="homes-tag sale">For Sale</div>
@@ -230,7 +237,7 @@
                         </div>
                     </div>
                     <!-- Card 5 -->
-                    <div class="project-single">
+                    <div class="project-single" data-location="Chicago" data-type="Apartment" data-status="For Rent" data-keyword="downtown cozy studio apartment chicago il 5th ave">
                         <div class="project-inner">
                             <div class="homes-tag featured">Featured</div>
                             <div class="homes-tag rent">For Rent</div>
@@ -265,7 +272,7 @@
                         </div>
                     </div>
                     <!-- Card 6 -->
-                    <div class="project-single">
+                    <div class="project-single" data-location="Seattle" data-type="Condo" data-status="For Sale" data-keyword="luxury woodland estate seattle wa forest lane">
                         <div class="project-inner">
                             <div class="homes-tag featured">Featured</div>
                             <div class="homes-tag sale">For Sale</div>
@@ -309,18 +316,20 @@
                         <h3>Filter Properties</h3>
                         <div>
                             <label style="font-size: 0.8rem; font-weight:600; display:block; margin-bottom:0.25rem;">Location</label>
-                            <select>
+                            <select id="filter-location">
                                 <option>All Locations</option>
                                 <option>New York</option>
                                 <option>Los Angeles</option>
                                 <option>Chicago</option>
                                 <option>San Francisco</option>
                                 <option>Miami</option>
+                                <option>Boston</option>
+                                <option>Seattle</option>
                             </select>
                         </div>
                         <div>
                             <label style="font-size: 0.8rem; font-weight:600; display:block; margin-bottom:0.25rem;">Property Type</label>
-                            <select>
+                            <select id="filter-type">
                                 <option>All Types</option>
                                 <option>Family House</option>
                                 <option>Apartment</option>
@@ -329,7 +338,7 @@
                         </div>
                         <div>
                             <label style="font-size: 0.8rem; font-weight:600; display:block; margin-bottom:0.25rem;">Status</label>
-                            <select>
+                            <select id="filter-status">
                                 <option>Any Status</option>
                                 <option>For Sale</option>
                                 <option>For Rent</option>
@@ -337,9 +346,9 @@
                         </div>
                         <div>
                             <label style="font-size: 0.8rem; font-weight:600; display:block; margin-bottom:0.25rem;">Keyword</label>
-                            <input type="text" placeholder="Enter keyword...">
+                            <input type="text" id="filter-keyword" placeholder="Enter keyword...">
                         </div>
-                        <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+                        <button id="filter-apply-btn" class="btn btn-primary" style="width: 100%;">Apply Filters</button>
                     </div>
 
                     <!-- SECTION 6: MORTGAGE CALCULATOR SIDEBAR WIDGET -->
