@@ -2315,6 +2315,11 @@ section {
     opacity: 1;
 }
 
+.partners img:hover {
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
 /* Blog Sidebar widgets */
 .blog-sidebar {
     display: flex;
@@ -2661,6 +2666,7 @@ section {
 
     .carousel-slide {
         flex: 0 0 100%;
+        min-width: 0 !important;
     }
 
     .services-home .row {
@@ -2697,6 +2703,22 @@ section {
 
     .property-features-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Responsive List Layout */
+    .listing-container.list-layout .project-single {
+        flex-direction: column;
+    }
+
+    .listing-container.list-layout .project-inner {
+        flex: 0 0 auto;
+        width: 100%;
+        min-height: auto;
+        aspect-ratio: 4/3;
+    }
+
+    .listing-container.list-layout .homes-content {
+        padding: 1.5rem;
     }
 }
 
@@ -2741,6 +2763,11 @@ section {
         overflow-x: hidden;
         width: 100%;
     }
+    /* Collapse all inline-styled grids to 1 column to prevent horizontal overflow on small viewports */
+    .container div[style*="display: grid"],
+    .container div[style*="display:grid"] {
+        grid-template-columns: 1fr !important;
+    }
     /* Logo scaling to prevent overlaps */
     .logo img {
         max-width: 130px !important;
@@ -2782,7 +2809,7 @@ section {
         flex: 0 0 100% !important;
     }
     /* Form Padding adjustments */
-    .banner-search-wrap, .sidebar-filters, .agent-contact-card, .custom-form, .property-desc-box {
+    .banner-search-wrap, .sidebar-filters, .mortgage-calculator, .agent-contact-card, .custom-form, .property-desc-box, .listing-toolbar {
         padding: 1.5rem 1rem !important;
     }
     /* Make all form grids single-column on small screens */
