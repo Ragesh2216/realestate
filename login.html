@@ -186,7 +186,7 @@
                                 <input type="checkbox" id="agree-terms" required style="width: 16px; height: 16px; margin: 0;">
                                 <label for="agree-terms" style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0; cursor: pointer; user-select: none;">I agree to the Terms & Conditions</label>
                             </div>
-                            <button type="submit" class="btn btn-green" style="width: 100%; padding: 0.85rem 0; font-size: 0.95rem; font-weight: 700;">Create Free Account</button>
+                            <button  href="login.html" type="submit" class="btn btn-green" style="width: 100%; padding: 0.85rem 0; font-size: 0.95rem; font-weight: 700;">Create Free Account</button>
                         </form>
                     </div>
 
@@ -435,11 +435,8 @@
                 localStorage.setItem('userName', role === 'admin' ? 'System Admin' : 'Mary Jane');
             }
             
-            if (role === 'admin') {
-                window.location.href = 'dashboard-admin.html';
-            } else {
-                window.location.href = 'dashboard-client.html';
-            }
+            switchAuthTab('login');
+            event.target.reset();
         }
         
         // Auto select signup tab if URL hash is tab-2

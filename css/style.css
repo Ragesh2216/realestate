@@ -3472,7 +3472,7 @@ body.mmenu-active #header-container {
 }
 
 #navigation ul li a {
-    text-transform: lowercase !important;
+    text-transform: capitalize !important;
     font-weight: 500 !important;
     font-size: 0.9rem !important;
     color: var(--text-secondary) !important;
@@ -3485,7 +3485,7 @@ body.mmenu-active #header-container {
     border-radius: 6px !important;
     background-color: #f8fafc !important;
     color: var(--text-primary) !important;
-    text-transform: lowercase !important;
+    text-transform: capitalize !important;
     font-weight: 600 !important;
 }
 
@@ -3919,5 +3919,82 @@ body.mmenu-active #header-container {
     .developer-featured-stats div {
         border-left: none !important;
         padding-left: 0 !important;
+    }
+}
+
+/* --- ADDED FOR USER REQUESTS --- */
+
+/* Highlight active page in navigation */
+#navigation > ul > li.active > a {
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+    position: relative !important;
+}
+
+#navigation > ul > li.active > a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0px !important;
+    left: 0.75rem !important;
+    right: 0.75rem !important;
+    height: 2px !important;
+    background-color: var(--primary) !important;
+}
+
+@media (max-width: 1024px) {
+    #navigation > ul > li.active > a::after {
+        display: none !important;
+    }
+}
+
+/* Custom Select Dropdowns for Home Page Search Bar */
+.field-select {
+    font-size: 0.95rem !important;
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    margin-top: 0.15rem !important;
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    font-family: inherit !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230f172a' width='18px' height='18px'><path d='M7 10l5 5 5-5z'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: right center !important;
+    padding-right: 1.5rem !important;
+}
+
+.field-select option {
+    background-color: #ffffff !important;
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+}
+
+/* Responsive map container on mobile contact page */
+.contact-map-wrap {
+    width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+.contact-map-wrap iframe {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+@media (max-width: 768px) {
+    .contact-map-wrap {
+        margin-top: 2rem !important;
+    }
+    .contact-map-wrap iframe {
+        height: 300px !important;
     }
 }

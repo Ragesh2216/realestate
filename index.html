@@ -82,25 +82,46 @@
 
             <!-- Floating Search Bar -->
             <div class="hero-search-bar-container">
-                <div class="hero-search-bar">
+                <form action="404.html" method="GET" class="hero-search-bar">
                     <div class="search-field">
                         <span class="field-label">LOCATION</span>
-                        <span class="field-value">Downtown Core</span>
+                        <select name="location" class="field-select" required>
+                            <option value="Downtown Core">Downtown Core</option>
+                            <option value="Central Park South">Central Park South</option>
+                            <option value="Beverly Sunset">Beverly Sunset</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="Boston">Boston</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Chicago">Chicago</option>
+                        </select>
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-field">
                         <span class="field-label">BUDGET</span>
-                        <span class="field-value">$400k - $700k</span>
+                        <select name="budget" class="field-select" required>
+                            <option value="$400k - $700k">$400k - $700k</option>
+                            <option value="$100k - $200k">$100k - $200k</option>
+                            <option value="$200k - $400k">$200k - $400k</option>
+                            <option value="$700k - $1M">$700k - $1M</option>
+                            <option value="$1M+">$1M+</option>
+                        </select>
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-field">
                         <span class="field-label">PROPERTY TYPE</span>
-                        <span class="field-value">Apartment</span>
+                        <select name="property_type" class="field-select" required>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Family House">Family House</option>
+                            <option value="Villa">Villa</option>
+                            <option value="Mansion">Mansion</option>
+                            <option value="Office">Office</option>
+                            <option value="Condo">Condo</option>
+                        </select>
                     </div>
-                    <a href="404.html" class="search-submit-btn">
+                    <button type="submit" class="search-submit-btn" style="border: none; cursor: pointer;">
                         <i class="fa-solid fa-magnifying-glass"></i> Search
-                    </a>
-                </div>
+                    </button>
+                </form>
             </div>
 
             <!-- Stats Section -->
@@ -924,7 +945,7 @@
                         <div class="col-lg-3">
                             <div class="netabout">
                                 <a href="index.html" class="logo">
-                                    <img src="images/logo-stackly.png" alt="Stackly logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle;">
+                                    <img src="images/stackly-logo%20golden.webp" alt="Stackly logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle;">
                                 </a>
                                 <p>Simplifying the process of renting, buying, and advertising properties. Premium real estate layouts made accessible.</p>
                             </div>
